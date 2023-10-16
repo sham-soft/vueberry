@@ -1,0 +1,156 @@
+<template lang="pug">
+button.button(
+        :class="componentClasses"
+        @click="onClick"
+    )
+    .loader(v-if="isLoading")
+        .loader-circle
+
+    .text
+        slot Button
+
+</template>
+
+<script setup lang="ts">
+import { computed } from 'vue';
+
+const props = withDefaults(
+    defineProps<{
+        isLoading?: boolean,
+        isDisabled?: boolean,
+        size?: string,
+        variant?: string,
+        type?: string,
+    }>(),
+    {
+        isLoading: false,
+        isDisabled: false,
+        size: 'medium',
+        variant: 'default',
+        type: 'primary',
+    },
+);
+
+const emits = defineEmits<{
+    (e: 'click'): void
+}>();
+
+const componentClasses = computed<(string | object)[]>(() => {
+    return [
+        'size-' + props.size,
+        'variant-' + props.variant,
+        'type-' + props.type,
+        {
+            'loading': props.isLoading,
+            'disabled': props.isDisabled,
+        },
+    ];
+});
+
+
+function onClick(): void {
+    if (props.isLoading || props.isDisabled) {
+        return;
+    }
+
+    emits('click');
+}
+
+</script>
+
+<style scoped lang="sass">
+.button
+    @extend %flex_row-center-center
+    position: relative
+    padding: 12px 20px
+    background: $color-blue-1
+    color: $color-white-1
+    border: none
+    border-radius: 8px
+    font-weight: 600
+    font-size: 16px
+    overflow: hidden
+    &:hover
+        filter: brightness(97%)
+    &:active
+        opacity: 0.9
+
+.loader
+    @extend %flex_row-center-center
+    position: absolute
+    width: 100%
+    height: 100%
+    &-circle
+        width: 18px
+        height: 18px
+        border: 2.5px solid $color-white-1
+        border-bottom-color: transparent
+        border-radius: 50%
+        box-sizing: border-box
+        animation: rotation 0.9s linear infinite
+        @keyframes rotation
+            0%
+                transform: rotate(0deg)
+            100%
+                transform: rotate(360deg)
+
+.loading
+    pointer-events: none
+    opacity: 0.9
+    .text
+        opacity: 0
+
+.disabled
+    opacity: 0.8
+    cursor: not-allowed
+    &.button
+        &:hover
+            filter: brightness(100%)
+        &:active
+            opacity: 0.8
+
+.size
+    &-small
+        height: 32px
+        font-size: 14px
+    &-medium
+        height: 40px
+        font-size: 16px
+    &-large
+        height: 48px
+        font-size: 18px
+
+@mixin getType($primary, $secondary)
+    &:is(.variant-default)
+        background: $primary
+        color: $secondary
+        .loader-circle
+            border-color: $secondary
+            border-bottom-color: transparent
+    &:is(.variant-outline)
+        background: transparent
+        border: 1px solid $primary
+        color: $primary
+        .loader-circle
+            border-color: $primary
+            border-bottom-color: transparent
+    &:is(.variant-text)
+        background: transparent
+        color: $primary
+        .loader-circle
+            border-color: $primary
+            border-bottom-color: transparent
+
+.type
+    &-default
+        @include getType($color-dark-1, $color-white-1)
+    &-primary
+        @include getType($color-blue-1, $color-white-1)
+    &-light
+        @include getType($color-gray-4, $color-dark-1)
+    &-danger
+        @include getType($color-red-1, $color-white-1)
+    &-success
+        @include getType($color-green-1, $color-white-1)
+
+</style>

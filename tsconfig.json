@@ -1,0 +1,25 @@
+{
+    "extends": "@vue/tsconfig/tsconfig.web.json",
+    "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./src/*"]
+        },
+        "preserveValueImports": false, // Добавлено чтоб не было ошибки: 'importsNotUsedAsValues', Use 'verbatimModuleSyntax'
+        "importsNotUsedAsValues": "remove", // Добавлено чтоб не было ошибки: 'importsNotUsedAsValues', Use 'verbatimModuleSyntax'
+        "lib": ["es2017", "dom", "dom.iterable", "scripthost"],
+    },
+
+    "references": [
+        {
+            "path": "./tsconfig.node.json"
+        }
+    ],
+
+    "vueCompilerOptions": {
+        "plugins": [
+            "@volar/vue-language-plugin-pug"
+        ]
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "headers": [
+        {
+            "id": "first",
+            "title": "First Name"
+        },
+        {
+            "id": "last",
+            "title": "Last Name"
+        },
+        {
+            "id": "age",
+            "title": "Age"
+        }
+    ],
+    "items": [
+        {
+            "first": "Tina",
+            "last": "Flores",
+            "age": "15"
+        },
+        {
+            "first": "Jesse",
+            "last": "Jacobs",
+            "age": "22"
+        },
+        {
+            "first": "Nika",
+            "last": "Gerber",
+            "age": "35"
+        },
+        {
+            "first": "Mike",
+            "last": "Sunders",
+            "age": "19"
+        }
+    ]
+}
