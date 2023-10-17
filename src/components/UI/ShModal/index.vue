@@ -63,34 +63,34 @@ function onClickOk() {
 
 <style lang="sass" scoped>
 .modal-wrap
-    @extend %flex_row-center-center
+    @extend %sh-flex_row-center-center
     position: fixed
     width: 100%
     height: 100%
     top: 0
     left: 0
     z-index: 2
-    background: rgb($color-dark-1, 0.8)
+    background: rgb($sh-color-dark-1, 0.8)
 
 .modal
-    @extend %flex_column-between
-    background: $color-white-1
+    @extend %sh-flex_column-between
+    background: $sh-color-white-1
     min-width: 300px
     border-radius: 8px
     overflow: hidden
-    color: $color-dark-1
+    color: $sh-color-dark-1
     font-weight: 500
 
 .header
-    @extend %flex_row-center-between
-    background: $color-gray-4
+    @extend %sh-flex_row-center-between
+    background: $sh-color-gray-4
     padding: 15px
     font-size: 24px
 
 .icon
     width: 25px
     height: 25px
-    fill: $color-gray-2
+    fill: $sh-color-gray-2
     cursor: pointer
 
 .text
@@ -99,26 +99,26 @@ function onClickOk() {
     font-size: 18px
 
 .footer
-    @extend %flex_row-center-end
-    background: $color-gray-4
+    @extend %sh-flex_row-center-end
+    background: $sh-color-gray-4
     padding: 15px
     font-size: 16px
 
 .button-no
-    @extend %flex_row-center-center
+    @extend %sh-flex_row-center-center
     width: 60px
-    background: $color-white-1
-    border: 1px solid $color-gray-1
+    background: $sh-color-white-1
+    border: 1px solid $sh-color-gray-1
     border-radius: 4px
     padding: 5px 10px
 
 .button-ok
-    @extend %flex_row-center-center
+    @extend %sh-flex_row-center-center
     width: 60px
     margin-left: 15px
-    color: $color-white-1
-    border: 1px solid $color-blue-1
-    background: $color-blue-1
+    color: $sh-color-white-1
+    border: 1px solid $sh-color-blue-1
+    background: $sh-color-blue-1
     border-radius: 4px
     padding: 5px 10px
 

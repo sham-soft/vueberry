@@ -53,20 +53,20 @@ function setActiveTab(tab: string): void {
 
 <style lang="sass" scoped>
 .tabs
-    @extend %flex_row
-    color: $color-dark-1
+    @extend %sh-flex_row
+    color: $sh-color-dark-1
 
 .tab
     font-size: 18px
-    color: $color-dark-1
+    color: $sh-color-dark-1
     margin-right: 20px
     cursor: pointer
     &-active
-        color: $color-blue-1
-        border-bottom: 2px solid $color-blue-1
+        color: $sh-color-blue-1
+        border-bottom: 2px solid $sh-color-blue-1
 
 .tabs-column
-    @extend %flex_column
+    @extend %sh-flex_column
     .tab
         margin-right: 0
         margin-top: 10px

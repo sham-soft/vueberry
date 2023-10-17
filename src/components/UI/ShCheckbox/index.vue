@@ -61,7 +61,7 @@ function onChecked(): void {
 
 <style lang="sass" scoped>
 .checkbox
-    @extend %flex_row-center
+    @extend %sh-flex_row-center
     cursor: pointer
 
 .input
@@ -80,24 +80,24 @@ function onChecked(): void {
         flex-shrink: 0
         flex-grow: 0
         cursor: pointer
-        border: 1px solid $color-gray-3
+        border: 1px solid $sh-color-gray-3
         border-radius: 4px
         background-repeat: no-repeat
         background-position: center center
-        background-color: $color-white-1
+        background-color: $sh-color-white-1
            
 .name
     font-size: 14px
     font-weight: 500
-    color: $color-dark-1
+    color: $sh-color-dark-1
     margin-left: 8px
     line-height: 1px
 
 .input:hover + .label::before
-    background-color: $color-gray-4
+    background-color: $sh-color-gray-4
 
 .input:checked + .label::before
-    border-color: $color-blue-1
+    border-color: $sh-color-blue-1
     background-color: transparent
     background-image: url('/img/radioMark.svg')
     background-size: 130% // TODO - в будущем удалить и заменить на иконку чекбокса

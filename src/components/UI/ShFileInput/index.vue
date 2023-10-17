@@ -128,33 +128,33 @@ function clearField() {
 .label
     font-weight: 500
     font-size: 12px
-    color: $color-gray-2
+    color: $sh-color-gray-2
     margin-left: 45px
     margin-bottom: 5px
 
 .field-wrap
-    @extend %flex_row-center
+    @extend %sh-flex_row-center
 
 .icon-clip
     min-width: 30px
     max-width: 30px
     height: 30px
-    fill: $color-gray-2
+    fill: $sh-color-gray-2
     cursor: pointer
 
 .field
-    @extend %flex_row-center-between
+    @extend %sh-flex_row-center-between
     position: relative
-    border: 1px solid $color-gray-3
+    border: 1px solid $sh-color-gray-3
     border-radius: 8px
     height: 40px
     width: calc(100% - 40px)
-    background: $color-gray-5
+    background: $sh-color-gray-5
     padding: 0 12px
     margin-left: 10px
     padding-right: 30px
     &:hover
-        border-color: $color-gray-2
+        border-color: $sh-color-gray-2
 
 .field-input
     width: 100%
@@ -167,18 +167,18 @@ function clearField() {
 .name, .placeholder
     font-weight: 500
     font-size: 14px
-    color: $color-gray-2
+    color: $sh-color-gray-2
     text-overflow: ellipsis
     white-space: nowrap
     overflow: hidden
 
 .name
-    color: $color-dark-1
+    color: $sh-color-dark-1
 
 .icon-clear
     width: 20px
     height: 20px
-    fill: $color-gray-2
+    fill: $sh-color-gray-2
     cursor: pointer
     position: absolute
     right: 10px
@@ -187,7 +187,7 @@ function clearField() {
     position: absolute
     margin-top: 5px
     margin-left: 45px
-    color: $color-gray-2
+    color: $sh-color-gray-2
     font-size: 12px
 
 .disabled
@@ -196,10 +196,10 @@ function clearField() {
 
 .error
     .field
-        border-color: $color-red-1
+        border-color: $sh-color-red-1
         &:hover
-            border-color: $color-red-1
+            border-color: $sh-color-red-1
     .label, .message
-        color: $color-red-1
+        color: $sh-color-red-1
 
 </style>

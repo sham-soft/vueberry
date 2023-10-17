@@ -1,10 +1,10 @@
 {
     "extends": "@vue/tsconfig/tsconfig.web.json",
-    "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+    "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "docs/**/*", "docs/**/*.vue"],
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
-            "@/*": ["./src/*"]
+            "@/*": ["./docs/*"]
         },
         "preserveValueImports": false, // Добавлено чтоб не было ошибки: 'importsNotUsedAsValues', Use 'verbatimModuleSyntax'
         "importsNotUsedAsValues": "remove", // Добавлено чтоб не было ошибки: 'importsNotUsedAsValues', Use 'verbatimModuleSyntax'

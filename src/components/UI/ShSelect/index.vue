@@ -214,21 +214,21 @@ function clearField() {
     margin-left: 5px
     font-weight: 500
     font-size: 12px
-    color: $color-gray-2
+    color: $sh-color-gray-2
     margin-left: 5px
     margin-bottom: 5px
 
 .icon-clear
     width: 20px
     height: 20px
-    fill: $color-gray-2
+    fill: $sh-color-gray-2
     cursor: pointer
 
 .icon-chevron
     min-width: 25px
     max-width: 25px
     height: 25px
-    fill: $color-gray-2
+    fill: $sh-color-gray-2
     &-invert
         transform: rotate(180deg)
 
@@ -237,31 +237,31 @@ function clearField() {
     width: 100%
     min-height: 50px
     max-height: 200px
-    background-color: $color-white-1
+    background-color: $sh-color-white-1
     border-radius: 4px
-    box-shadow: 0 3px 19px $color-gray-3
+    box-shadow: 0 3px 19px $sh-color-gray-3
     overflow-y: auto
     z-index: 1
 
 .item
-    @extend %flex_row-center
+    @extend %sh-flex_row-center
     cursor: pointer
     padding: 9px 0 9px 15px
     min-height: 35px
     font-size: 14px
-    color: $color-dark-1
+    color: $sh-color-dark-1
     &:hover
-        background: $color-gray-4
+        background: $sh-color-gray-4
 
 .message
     position: absolute
     margin-top: 5px
     margin-left: 5px
-    color: $color-gray-2
+    color: $sh-color-gray-2
     font-size: 12px
 
 .focus
-    border-color: $color-gray-2
+    border-color: $sh-color-gray-2
 
 .size
     &-small
@@ -302,7 +302,7 @@ function clearField() {
     &-underline
         border: none
         border-radius: 0
-        border-bottom: 1px solid $color-gray-3
+        border-bottom: 1px solid $sh-color-gray-3
         background: transparent
         padding: 0
 
@@ -314,14 +314,14 @@ function clearField() {
         margin-left: 0
 
 .error
-    border-color: $color-red-1
+    border-color: $sh-color-red-1
     &:hover,
     &_focused
-        border-color: $color-red-1
+        border-color: $sh-color-red-1
 
 .select:has(.error)
     .label,
     .message
-        color: $color-red-1
+        color: $sh-color-red-1
 
 </style>

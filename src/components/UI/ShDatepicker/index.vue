@@ -258,7 +258,7 @@ function clearField(): void {
     margin-left: 5px
     font-weight: 500
     font-size: 12px
-    color: $color-gray-2
+    color: $sh-color-gray-2
     margin-left: 5px
     margin-bottom: 5px
 
@@ -266,44 +266,44 @@ function clearField(): void {
     min-width: 20px
     max-width: 20px
     height: 20px
-    fill: $color-gray-2
+    fill: $sh-color-gray-2
     margin-right: 5px
 
 .icon-clear
     width: 20px
     height: 20px
-    fill: $color-gray-2
+    fill: $sh-color-gray-2
     cursor: pointer
 
 .message
     position: absolute
     margin-top: 5px
     margin-left: 5px
-    color: $color-gray-2
+    color: $sh-color-gray-2
     font-size: 12px
 
 .calendar
     position: absolute
     padding: 15px
-    background: $color-gray-4
+    background: $sh-color-gray-4
     border-radius: 4px
     margin-top: 10px
-    color: $color-dark-1
+    color: $sh-color-dark-1
 
 .calendar-heaeder
-    @extend %flex_row-center-between
+    @extend %sh-flex_row-center-between
 
 .prev, .next
     min-width: 35px
     max-width: 35px
     height: 35px
-    fill: $color-gray-2
+    fill: $sh-color-gray-2
     transform: rotate(90deg)
-    border: 1px solid $color-gray-2
+    border: 1px solid $sh-color-gray-2
     border-radius: 8px
     cursor: pointer
     &:hover
-        border-color: $color-gray-1
+        border-color: $sh-color-gray-1
 
 .next
     transform: rotate(270deg)
@@ -313,34 +313,34 @@ function clearField(): void {
     margin: 0 5px
     height: 35px
     border-radius: 8px
-    border-color: $color-gray-2
+    border-color: $sh-color-gray-2
     cursor: pointer
     background: transparent
     &:hover
-        border-color: $color-gray-1
+        border-color: $sh-color-gray-1
 
 .calendar-body
     margin-top: 15px
 
 .week
-    @extend %flex_row-center
+    @extend %sh-flex_row-center
     padding-bottom: 10px
-    border-bottom: 2px solid $color-gray-3
+    border-bottom: 2px solid $sh-color-gray-3
 
 .week-day
-    color: $color-blue-1
+    color: $sh-color-blue-1
     width: 35px
 
 .day-list
     margin-top: 10px
 
 .day-row
-    @extend %flex_row-center
+    @extend %sh-flex_row-center
     margin-top: 10px
 
 .day
-    @extend %flex_row-center-center
-    color: $color-dark-1
+    @extend %sh-flex_row-center-center
+    color: $sh-color-dark-1
     width: 30px
     height: 30px
     margin-right: 5px
@@ -348,18 +348,18 @@ function clearField(): void {
     line-height: 1px
     cursor: pointer
     &:hover
-        background: $color-gray-3
+        background: $sh-color-gray-3
     &-active
-        background: $color-gray-3
+        background: $sh-color-gray-3
 
 .error
-    border-color: $color-red-1
+    border-color: $sh-color-red-1
     &:hover
-        border-color: $color-red-1
+        border-color: $sh-color-red-1
 
 .datepicker:has(.error)
     .label,
     .message
-        color: $color-red-1
+        color: $sh-color-red-1
 
 </style>

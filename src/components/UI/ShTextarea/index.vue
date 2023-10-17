@@ -90,27 +90,27 @@ function onBlur(): void {
 .label
     font-weight: 600
     font-size: 12px
-    color: $color-gray-2
+    color: $sh-color-gray-2
     margin-bottom: 12px
 
 .textarea
-    border: 1px solid $color-gray-3
+    border: 1px solid $sh-color-gray-3
     border-radius: 8px
     width: 100%
     font-weight: 500
     font-size: 14px
-    color: $color-dark-1
+    color: $sh-color-dark-1
     outline: none
     height: 40px
     padding: 10px 12px
-    background: $color-gray-5
-    caret-color: $color-blue-1
+    background: $sh-color-gray-5
+    caret-color: $sh-color-blue-1
     &:hover,
     &-focused
-        border-color: $color-gray-2
+        border-color: $sh-color-gray-2
     &::placeholder
         font-size: 14px
-        color: $color-gray-2
+        color: $sh-color-gray-2
 
 .disabled
     pointer-events: none

@@ -33,7 +33,7 @@ const componentClasses = computed<(string | object)[]>(() => {
 
 <style scoped lang="sass">
 .tooltip-wrap
-    @extend %flex_row-center-center
+    @extend %sh-flex_row-center-center
     position: absolute
     left: 0
     top: 0
@@ -46,11 +46,11 @@ const componentClasses = computed<(string | object)[]>(() => {
             animation: slowlyAppear 0.3s ease-in-out
 
 .tooltip
-    @extend %flex_row-center-center
+    @extend %sh-flex_row-center-center
     position: absolute
-    background: rgb($color-gray-1, 0.9)
+    background: rgb($sh-color-gray-1, 0.9)
     padding: 10px 20px
-    color: $color-white-1
+    color: $sh-color-white-1
     border-radius: 4px
     font-weight: 500
     display: none

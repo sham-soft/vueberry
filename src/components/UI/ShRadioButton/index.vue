@@ -72,14 +72,14 @@ const { isLabel } = useLabel(refLabel);
 .label
     font-weight: 600
     font-size: 12px
-    color: $color-gray-2
+    color: $sh-color-gray-2
     margin-bottom: 12px
 
 .button-group
-    @extend %flex_row-center
+    @extend %sh-flex_row-center
 
 .button
-    @extend %flex_row-center
+    @extend %sh-flex_row-center
     margin-left: 32px
     &:first-child
         margin-left: 0
@@ -87,7 +87,7 @@ const { isLabel } = useLabel(refLabel);
 .radio
     &:has(.group-column)
         .button-group
-            @extend %flex_column-start-start
+            @extend %sh-flex_column-start-start
         .button
             margin-top: 15px
             margin-left: 0
@@ -109,25 +109,25 @@ const { isLabel } = useLabel(refLabel);
     height: 15px
     flex-shrink: 0
     flex-grow: 0
-    border: 1px solid $color-gray-3
+    border: 1px solid $sh-color-gray-3
     border-radius: 50%
     background-repeat: no-repeat
     background-position: center center
     cursor: pointer
-    background-color: $color-white-1
+    background-color: $sh-color-white-1
 
 .input-field:hover + .input-label::before
-    background-color: $color-gray-4
+    background-color: $sh-color-gray-4
 
 .input-field:checked + .input-label::before
-    border-color: $color-blue-1
+    border-color: $sh-color-blue-1
     background-color: transparent
     background-image: url('/img/radioMark.svg')
 
 .name
     font-size: 14px
     font-weight: 500
-    color: $color-dark-1
+    color: $sh-color-dark-1
     margin-left: 8px
     cursor: pointer
 

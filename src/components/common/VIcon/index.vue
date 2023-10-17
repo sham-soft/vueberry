@@ -46,7 +46,7 @@ const format = computed<string>(() => props.path.substring(props.path.lastIndexO
 
 <style lang="sass" scoped>
 .icon
-    @extend %flex_row
+    @extend %sh-flex_row
     &__img
         width: inherit
         height: inherit

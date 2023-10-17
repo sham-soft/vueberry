@@ -37,7 +37,7 @@ function onChecked(): void {
 
 <style lang="sass" scoped>
 .checkbox
-    @extend %flex_row-center
+    @extend %sh-flex_row-center
     margin-left: 32px
     &:first-child
         margin-left: 0
@@ -49,7 +49,7 @@ function onChecked(): void {
     &-name
         font-size: 14px
         font-weight: 500
-        color: $color-dark-1
+        color: $sh-color-dark-1
         margin-left: 8px
         cursor: pointer
 
@@ -70,38 +70,38 @@ function onChecked(): void {
     height: 15px
     flex-shrink: 0
     flex-grow: 0
-    border: 1px solid $color-gray-3
+    border: 1px solid $sh-color-gray-3
     border-radius: 4px
     background-repeat: no-repeat
     background-position: center center
     cursor: pointer
-    background-color: $color-white-1
+    background-color: $sh-color-white-1
 
 .checkbox-input + label:hover::before
-    background-color: $color-gray-4
+    background-color: $sh-color-gray-4
 
 /* стили при наведении курсора на checkbox */
 .checkbox-input:not(:disabled):not(:checked) + label:hover::before
-    border-color: $color-gray-3
+    border-color: $sh-color-gray-3
 
 /* стили для активного чекбокса (при нажатии на него) */
 .checkbox-input:not(:disabled):active + label::before
-    background-color: $color-white-1
-    border-color: $color-gray-3
+    background-color: $sh-color-white-1
+    border-color: $sh-color-gray-3
 
 /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
 .checkbox-input:focus:not(:checked) + label::before
-    border-color: $color-blue-1
+    border-color: $sh-color-blue-1
 
 /* стили для чекбокса, находящегося в состоянии checked */
 .checkbox-input:checked + label::before
-    border-color: $color-blue-1
+    border-color: $sh-color-blue-1
     background-color: transparent
     background-image: url('/img/radioMark.svg')
     background-size: 130% // TODO - в будущем удалить и заменить на иконку чекбокса
 
 /* стили для чекбокса, находящегося в состоянии disabled */
 .checkbox-input:disabled + label::before
-    background-color: $color-white-3
+    background-color: $sh-color-white-3
 
 </style>

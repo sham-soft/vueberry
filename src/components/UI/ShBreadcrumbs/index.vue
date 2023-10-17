@@ -47,15 +47,15 @@ function isSeparator(index: number) {
 
 <style scoped lang="sass">
 .breadcrumbs
-    @extend %flex_wrap
+    @extend %sh-flex_wrap
 
 .crumb
-    @extend %flex_row
+    @extend %sh-flex_row
     margin-right: 10px
-    color: $color-dark-1
+    color: $sh-color-dark-1
     font-weight: 500
     &:last-child
-        color: $color-gray-2
+        color: $sh-color-gray-2
 
 .link:hover
     text-decoration-line: underline

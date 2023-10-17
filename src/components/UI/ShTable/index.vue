@@ -43,9 +43,9 @@ withDefaults(
 <style lang="sass" scoped>
 .table-wrap
     width: 100%
-    color: $color-dark-1
+    color: $sh-color-dark-1
     border-radius: 8px
-    border: 1px solid $color-gray-3
+    border: 1px solid $sh-color-gray-3
     overflow: auto
 
 .table
@@ -55,28 +55,28 @@ withDefaults(
 .header
     position: sticky
     top: 0
-    background: $color-white-1
+    background: $sh-color-white-1
     &-row
-        @extend %flex_row
-        border-bottom: 2px solid $color-gray-3
+        @extend %sh-flex_row
+        border-bottom: 2px solid $sh-color-gray-3
     &-item
         padding: 8px 6px
         flex: 1 1 0
         font-weight: 600
-        border-right: 1px solid $color-gray-3
+        border-right: 1px solid $sh-color-gray-3
         &:last-child
             border-right: none
 
 .body
     &-row
-        @extend %flex_row
-        border-bottom: 1px solid $color-gray-3
+        @extend %sh-flex_row
+        border-bottom: 1px solid $sh-color-gray-3
         &:last-child
             border-bottom: none
     &-column
         padding: 8px 6px
         flex: 1 1 0
-        border-right: 1px solid $color-gray-3
+        border-right: 1px solid $sh-color-gray-3
         &:last-child
             border-right: none
 

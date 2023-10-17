@@ -126,7 +126,7 @@ function clearField() {
 .label
     font-weight: 500
     font-size: 12px
-    color: $color-gray-2
+    color: $sh-color-gray-2
     margin-left: 5px
     margin-bottom: 5px
 
@@ -134,13 +134,13 @@ function clearField() {
     position: absolute
     margin-top: 5px
     margin-left: 5px
-    color: $color-gray-2
+    color: $sh-color-gray-2
     font-size: 12px
 
 .icon
     width: 20px
     height: 20px
-    fill: $color-gray-2
+    fill: $sh-color-gray-2
     cursor: pointer
 
 .size
@@ -182,7 +182,7 @@ function clearField() {
     &-underline
         border: none
         border-radius: 0
-        border-bottom: 1px solid $color-gray-3
+        border-bottom: 1px solid $sh-color-gray-3
         background: transparent
         padding: 0
 
@@ -194,14 +194,14 @@ function clearField() {
         margin-left: 0
 
 .error
-    border-color: $color-red-1
+    border-color: $sh-color-red-1
     &:hover,
     &_focused
-        border-color: $color-red-1
+        border-color: $sh-color-red-1
 
 .input-wrap:has(.error)
     .label,
     .message
-        color: $color-red-1
+        color: $sh-color-red-1
 
 </style>
