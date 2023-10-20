@@ -31,7 +31,7 @@
 
 <script setup lang="ts">
 import { ref, watch } from 'vue';
-import VIcon from '@/components/common/VIcon/index.vue';
+import VIcon from '../../common/VIcon/index.vue';
 
 const props = withDefaults(
     defineProps<{

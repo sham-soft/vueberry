@@ -24,7 +24,7 @@ teleport(to="#app")
 </template>
 
 <script setup lang="ts">
-import VIcon from '@/components/common/VIcon/index.vue';
+import VIcon from '../../common/VIcon/index.vue';
 
 withDefaults(
     defineProps<{

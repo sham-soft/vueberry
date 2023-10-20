@@ -34,8 +34,8 @@
 
 <script setup lang="ts">
 import { ref, computed, toRef } from 'vue';
-import VIcon from '@/components/common/VIcon/index.vue';
-import { useLabel } from '@/composables/label';
+import VIcon from '../../common/VIcon/index.vue';
+import { useLabel } from '../../../composables/label';
 
 const props = withDefaults(
     defineProps<{

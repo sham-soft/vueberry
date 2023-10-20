@@ -55,11 +55,11 @@
 
 <script setup lang="ts">
 import { ref, computed, toRef } from 'vue';
-import VIcon from '@/components/common/VIcon/index.vue';
-import VInput from '@/components/common/VInput/index.vue';
-import VCheckbox from '@/components/common/VCheckBox/index.vue';
-import type { TypeOption } from '@/components/UI/ShSelect/types';
-import { useLabel } from '@/composables/label';
+import VIcon from '../../common/VIcon/index.vue';
+import VInput from '../../common/VInput/index.vue';
+import VCheckbox from '../../common/VCheckBox/index.vue';
+import type { TypeOption } from './types';
+import { useLabel } from '../../../composables/label';
 
 type TypeModelValue = string | string[];
 

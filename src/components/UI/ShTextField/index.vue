@@ -33,10 +33,10 @@
 
 <script setup lang="ts">
 import { computed, toRef } from 'vue';
-import VIcon from '@/components/common/VIcon/index.vue';
-import VInput from '@/components/common/VInput/index.vue';
-import formatters from '@/helpers/formatters';
-import { useLabel } from '@/composables/label';
+import VIcon from '../../common/VIcon/index.vue';
+import VInput from '../../common/VInput/index.vue';
+import formatters from '../../../helpers/formatters';
+import { useLabel } from '../../../composables/label';
 
 const props = withDefaults(
     defineProps<{

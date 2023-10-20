@@ -19,7 +19,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import type { TypeCrumb } from '@/components/UI/ShBreadcrumbs/types';
+import type { TypeCrumb } from './types';
 
 const props = withDefaults(
     defineProps<{

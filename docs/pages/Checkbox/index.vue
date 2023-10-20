@@ -34,7 +34,7 @@ import { reactive } from 'vue';
 import PageWrap from '@/components/PageWrap/index.vue';
 import VApiTable from '@/components/common/VApiTable/index.vue';
 import VPlayground from '@/components/common/VPlayground/index.vue';
-import codeCheckbox from '@/components/UI/ShCheckbox/code';
+import codeCheckbox from './code';
 import apiJSON from '@/pages/Checkbox/api.json';
 import parametersJSON from '@/pages/Checkbox/parameters.json';
 import { useParameter } from '@/composables/playground';
