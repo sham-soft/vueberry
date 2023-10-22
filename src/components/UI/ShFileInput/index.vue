@@ -4,10 +4,7 @@
         slot {{ label }}
 
     .field-wrap
-        v-icon.icon-clip(
-            path="img/clip.svg"
-            @click="clickClip"
-        )
+        .icon-clip(@click="clickClip")
 
         .field
             input.field-input(
@@ -22,9 +19,8 @@
 
             p.name(v-else) {{ nameList }}
 
-            v-icon.icon-clear(
+            .icon-clear(
                 v-show="isIconClear"
-                path="img/clearField.svg"
                 @click="clearField"
             )
 
@@ -34,7 +30,6 @@
 
 <script setup lang="ts">
 import { ref, computed, toRef } from 'vue';
-import VIcon from '../../common/VIcon/index.vue';
 import { useLabel } from '../../../composables/label';
 
 const props = withDefaults(
@@ -139,8 +134,8 @@ function clearField() {
     min-width: 30px
     max-width: 30px
     height: 30px
-    fill: $sh-color-gray-2
     cursor: pointer
+    background-image: sh-icon-clip($sh-color-gray-2)
 
 .field
     @extend %sh-flex_row-center-between
@@ -178,10 +173,10 @@ function clearField() {
 .icon-clear
     width: 20px
     height: 20px
-    fill: $sh-color-gray-2
     cursor: pointer
     position: absolute
     right: 10px
+    background-image: sh-icon-clear($sh-color-gray-2)
 
 .message
     position: absolute

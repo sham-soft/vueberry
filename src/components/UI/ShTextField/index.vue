@@ -21,9 +21,8 @@
         template(v-slot:right)
             slot(name="right")
 
-            v-icon.icon(
+            .icon(
                 v-show="isIconClear"
-                path="img/clearField.svg"
                 @click="clearField"
             )
 
@@ -33,7 +32,6 @@
 
 <script setup lang="ts">
 import { computed, toRef } from 'vue';
-import VIcon from '../../common/VIcon/index.vue';
 import VInput from '../../common/VInput/index.vue';
 import formatters from '../../../helpers/formatters';
 import { useLabel } from '../../../composables/label';
@@ -140,8 +138,8 @@ function clearField() {
 .icon
     width: 20px
     height: 20px
-    fill: $sh-color-gray-2
     cursor: pointer
+    background-image: sh-icon-clear($sh-color-gray-2)
 
 .size
     &-small

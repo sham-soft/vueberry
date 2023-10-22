@@ -1,7 +1,6 @@
 <template lang="pug">
 .pagination
-    v-icon.prev(
-        path="img/chevron.svg"
+    .prev(
         :class="geDisabledClasses(1)"
         @click="setStep(modelValue - 1)"
     )
@@ -21,8 +20,7 @@
             @click="setStep(stepsLength)"
         ) {{ stepsLength }}
 
-    v-icon.next(
-        path="img/chevron.svg"
+    .next(
         :class="geDisabledClasses(stepsLength)"
         @click="setStep(modelValue + 1)"
     )
@@ -31,7 +29,6 @@
 
 <script setup lang="ts">
 import { ref, watch } from 'vue';
-import VIcon from '../../common/VIcon/index.vue';
 
 const props = withDefaults(
     defineProps<{
@@ -99,14 +96,14 @@ function geDisabledClasses(step: number): object {
     min-width: 35px
     max-width: 35px
     height: 35px
-    fill: $sh-color-dark-2
     transform: rotate(90deg)
     border: 1px solid $sh-color-dark-2
     border-radius: 8px
     cursor: pointer
+    background-image: sh-icon-chevron($sh-color-dark-2)
     &:hover
         border-color: $sh-color-gray-1
-        fill: $sh-color-gray-1
+        background-image: sh-icon-chevron($sh-color-gray-1)
 
 .prev
     margin-right: 10px
@@ -133,6 +130,6 @@ function geDisabledClasses(step: number): object {
     pointer-events: none
     opacity: 0.8
     border-color: $sh-color-gray-2
-    fill: $sh-color-gray-2
+    background-image: sh-icon-chevron($sh-color-gray-2)
 
 </style>

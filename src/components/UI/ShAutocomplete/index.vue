@@ -22,7 +22,7 @@
                 v-show="isIconClear"
                 @click.stop="clearField"
             )
-                v-icon.icon-clear(path="img/clearField.svg")
+                .icon-clear
 
     .message(v-if="message") {{ message }}
 
@@ -37,7 +37,6 @@
 
 <script setup lang="ts">
 import { ref, computed, toRef } from 'vue';
-import VIcon from '../../common/VIcon/index.vue';
 import VInput from '../../common/VInput/index.vue';
 import { useLabel } from '../../../composables/label';
 
@@ -150,8 +149,8 @@ function clearField() {
 .icon-clear
     width: 20px
     height: 20px
-    fill: $sh-color-gray-2
     cursor: pointer
+    background-image: sh-icon-clear($sh-color-gray-2)
 
 .list
     position: absolute

@@ -6,10 +6,7 @@ teleport(to="#app")
                 .title
                     slot(name="title") {{ title }}
 
-                v-icon.icon(
-                    path="img/clearField.svg"
-                    @click="onClose"
-                )
+                .icon(@click="onClose")
                 
             .text
                 slot {{ text }}
@@ -24,8 +21,6 @@ teleport(to="#app")
 </template>
 
 <script setup lang="ts">
-import VIcon from '../../common/VIcon/index.vue';
-
 withDefaults(
     defineProps<{
         title?: string,
@@ -90,8 +85,8 @@ function onClickOk() {
 .icon
     width: 25px
     height: 25px
-    fill: $sh-color-gray-2
     cursor: pointer
+    background-image: sh-icon-clear($sh-color-gray-2)
 
 .text
     margin: 40px 0

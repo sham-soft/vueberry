@@ -15,7 +15,7 @@
     )
         template(v-slot:left)
             slot(name="left")
-                v-icon.icon-calendar(path="img/calendar.svg")
+                .icon-calendar
 
         template(v-slot:right)
             slot(name="right")
@@ -24,7 +24,7 @@
                 v-show="isIconClear"
                 @click.stop="clearField"
             )
-                v-icon.icon-clear(path="img/clearField.svg")
+                .icon-clear
 
     .message(v-if="message") {{ message }}
 
@@ -35,10 +35,7 @@
         tabindex="-1"
     )
         .calendar-heaeder
-            v-icon.prev(
-                path="img/chevron.svg"
-                @click="setMonth(false)"
-            )
+            .prev(@click="setMonth(false)")
             select.calendar-select(
                 v-model="monthValue"
                 @focus="onFocus('month')"
@@ -59,10 +56,7 @@
                     :key="year"
                     :value="year"
                 ) {{ year }}
-            v-icon.next(
-                path="img/chevron.svg"
-                @click="setMonth(true)"
-            )
+            .next(@click="setMonth(true)")
 
         .calendar-body
             .week
@@ -86,7 +80,6 @@
 
 <script setup lang="ts">
 import { ref, reactive, computed, toRef } from 'vue';
-import VIcon from '../../common/VIcon/index.vue';
 import VInput from '../../common/VInput/index.vue';
 import formatters from '../../../helpers/formatters';
 import monthsJSON from './months.json';
@@ -266,14 +259,14 @@ function clearField(): void {
     min-width: 20px
     max-width: 20px
     height: 20px
-    fill: $sh-color-gray-2
     margin-right: 5px
+    background-image: sh-icon-calendar($sh-color-gray-2)
 
 .icon-clear
     width: 20px
     height: 20px
-    fill: $sh-color-gray-2
     cursor: pointer
+    background-image: sh-icon-clear($sh-color-gray-2)
 
 .message
     position: absolute
@@ -297,11 +290,11 @@ function clearField(): void {
     min-width: 35px
     max-width: 35px
     height: 35px
-    fill: $sh-color-gray-2
     transform: rotate(90deg)
     border: 1px solid $sh-color-gray-2
     border-radius: 8px
     cursor: pointer
+    background-image: sh-icon-chevron($sh-color-gray-2)
     &:hover
         border-color: $sh-color-gray-1
 
