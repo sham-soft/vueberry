@@ -1,4 +1,4 @@
-.sh-autocomplete
+.sh-text-field
     position: relative
 
     .label
@@ -8,39 +8,18 @@
         margin-left: 5px
         margin-bottom: 5px
 
-    .icon-clear
-        width: 20px
-        height: 20px
-        cursor: pointer
-        background-image: sh-icon-clear($sh-color-gray-2)
-
-    .list
-        position: absolute
-        width: 100%
-        min-height: 40px
-        max-height: 200px
-        background-color: $sh-color-white-1
-        border-radius: 4px
-        box-shadow: 0 3px 19px $sh-color-gray-3
-        overflow-y: auto
-        z-index: 1
-
-    .item
-        @extend %sh-flex_row-center
-        cursor: pointer
-        padding: 9px 0 9px 15px
-        min-height: 35px
-        font-size: 14px
-        color: $sh-color-dark-1
-        &:hover
-            background: $sh-color-gray-4
-
     .message
         position: absolute
         margin-top: 5px
         margin-left: 5px
         color: $sh-color-gray-2
         font-size: 12px
+
+    .icon
+        width: 20px
+        height: 20px
+        cursor: pointer
+        background-image: sh-icon-clear($sh-color-gray-2)
 
     .size
         &-small
@@ -81,7 +60,7 @@
         &_focused
             border-color: $sh-color-red-1
 
-.sh-autocomplete
+.sh-text-field
     &:has(.size-small)
         .label,
         .message
@@ -91,14 +70,14 @@
         .message
             font-size: 14px
 
-.sh-autocomplete:has(.variant-underline)
+.sh-text-field:has(.variant-underline)
     .label
         margin-left: 0
         margin-bottom: 0
     .message
         margin-left: 0
 
-.sh-autocomplete:has(.error)
+.sh-text-field:has(.error)
     .label,
     .message
         color: $sh-color-red-1

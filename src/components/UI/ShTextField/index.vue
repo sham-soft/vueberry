@@ -1,5 +1,5 @@
 <template lang="pug">
-.input-wrap
+.sh-text-field
     .label(v-if="isLabel")
         slot {{ label }}
 
@@ -116,90 +116,3 @@ function clearField() {
 }
 
 </script>
-
-<style lang="sass" scoped>
-.input-wrap
-    position: relative
-
-.label
-    font-weight: 500
-    font-size: 12px
-    color: $sh-color-gray-2
-    margin-left: 5px
-    margin-bottom: 5px
-
-.message
-    position: absolute
-    margin-top: 5px
-    margin-left: 5px
-    color: $sh-color-gray-2
-    font-size: 12px
-
-.icon
-    width: 20px
-    height: 20px
-    cursor: pointer
-    background-image: sh-icon-clear($sh-color-gray-2)
-
-.size
-    &-small
-        height: 32px
-        padding: 0 10px
-        &:deep(.field)
-            font-size: 12px
-            &::placeholder
-                font-size: 12px
-    &-medium
-        height: 40px
-        padding: 0 12px
-        &:deep(.field)
-            font-size: 14px
-            &::placeholder
-                font-size: 14px
-    &-large
-        height: 48px
-        padding: 0 14px
-        &:deep(.field)
-            font-size: 16px
-            &::placeholder
-                font-size: 16px
-
-.input-wrap
-    &:has(.size-small)
-        .label,
-        .message
-            font-size: 10px
-    &:has(.size-large)
-        .label,
-        .message
-            font-size: 14px
-
-.variant
-    &-outline
-        background: transparent
-    &-underline
-        border: none
-        border-radius: 0
-        border-bottom: 1px solid $sh-color-gray-3
-        background: transparent
-        padding: 0
-
-.input-wrap:has(.variant-underline)
-    .label
-        margin-left: 0
-        margin-bottom: 0
-    .message
-        margin-left: 0
-
-.error
-    border-color: $sh-color-red-1
-    &:hover,
-    &_focused
-        border-color: $sh-color-red-1
-
-.input-wrap:has(.error)
-    .label,
-    .message
-        color: $sh-color-red-1
-
-</style>

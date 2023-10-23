@@ -1,5 +1,5 @@
 <template lang="pug">
-.breadcrumbs
+.sh-breadcrumbs
     .crumb(
         v-for="(item, index) in items"
         :key="item.id"
@@ -44,32 +44,3 @@ function isSeparator(index: number) {
 }
 
 </script>
-
-<style scoped lang="sass">
-.breadcrumbs
-    @extend %sh-flex_wrap
-
-.crumb
-    @extend %sh-flex_row
-    margin-right: 10px
-    color: $sh-color-dark-1
-    font-weight: 500
-    &:last-child
-        color: $sh-color-gray-2
-
-.link:hover
-    text-decoration-line: underline
-    text-underline-offset: 2px
-
-.separator
-    margin-left: 10px
-
-.size
-    &-small
-        font-size: 16px
-    &-medium
-        font-size: 18px
-    &-large
-        font-size: 20px
-
-</style>

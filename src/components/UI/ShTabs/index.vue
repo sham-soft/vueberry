@@ -1,5 +1,5 @@
 <template lang="pug">
-.tabs(:class="componentClasses")
+.sh-tabs(:class="componentClasses")
     .tab(
         v-for="tab in tabs"
         :key="tab.id"
@@ -35,7 +35,7 @@ const emits = defineEmits<{
 
 const componentClasses = computed<object>(() => {
     return {
-        'tabs-column': props.isColumn,
+        'sh-tabs_column': props.isColumn,
     };
 });
 
@@ -50,27 +50,3 @@ function setActiveTab(tab: string): void {
 }
 
 </script>
-
-<style lang="sass" scoped>
-.tabs
-    @extend %sh-flex_row
-    color: $sh-color-dark-1
-
-.tab
-    font-size: 18px
-    color: $sh-color-dark-1
-    margin-right: 20px
-    cursor: pointer
-    &-active
-        color: $sh-color-blue-1
-        border-bottom: 2px solid $sh-color-blue-1
-
-.tabs-column
-    @extend %sh-flex_column
-    .tab
-        margin-right: 0
-        margin-top: 10px
-        &:first-child
-            margin-top: 0
-
-</style>

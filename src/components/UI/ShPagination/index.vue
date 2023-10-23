@@ -1,5 +1,5 @@
 <template lang="pug">
-.pagination
+.sh-pagination
     .prev(
         :class="geDisabledClasses(1)"
         @click="setStep(modelValue - 1)"
@@ -84,52 +84,3 @@ function geDisabledClasses(step: number): object {
 }
 
 </script>
-
-<style scoped lang="sass">
-.pagination
-    @extend %sh-flex_row-center-center
-    font-size: 20px
-    font-weight: 500
-    color: $sh-color-dark-1
-
-.prev, .next
-    min-width: 35px
-    max-width: 35px
-    height: 35px
-    transform: rotate(90deg)
-    border: 1px solid $sh-color-dark-2
-    border-radius: 8px
-    cursor: pointer
-    background-image: sh-icon-chevron($sh-color-dark-2)
-    &:hover
-        border-color: $sh-color-gray-1
-        background-image: sh-icon-chevron($sh-color-gray-1)
-
-.prev
-    margin-right: 10px
-
-.next
-    transform: rotate(270deg)
-    margin-left: 10px
-
-.step
-    @extend %sh-flex_row-center-center
-    width: 40px
-    height: 40px
-    margin-right: 5px
-    cursor: pointer
-    border-radius: 50%
-    &:hover
-        background: $sh-color-gray-4
-    &-active
-        background: $sh-color-gray-3
-    &-ellipsis
-        margin: 0 20px
-
-.disabled
-    pointer-events: none
-    opacity: 0.8
-    border-color: $sh-color-gray-2
-    background-image: sh-icon-chevron($sh-color-gray-2)
-
-</style>

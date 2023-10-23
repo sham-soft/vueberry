@@ -14,7 +14,7 @@ page-wrap
             :gitLink="gitLink"
             @change="setValue(data, $event)"
         )
-            .sh-table
+            .table
                 sh-table(
                     :headers="headers"
                     :items="items"
@@ -62,7 +62,7 @@ const data: TypeData = reactive({
 </script>
 
 <style scoped lang="sass">
-.sh-table
+.table
     width: 600px
     padding: 40px 0
 

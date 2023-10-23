@@ -1,5 +1,5 @@
 <template lang="pug">
-.textarea-wrap
+.sh-textarea-wrap
     .label(v-if="isLabel")
         slot {{ label }}
 
@@ -82,48 +82,3 @@ function onBlur(): void {
 }
 
 </script>
-
-<style lang="sass" scoped>
-.textarea-wrap
-    width: 100%
-
-.label
-    font-weight: 600
-    font-size: 12px
-    color: $sh-color-gray-2
-    margin-bottom: 12px
-
-.textarea
-    border: 1px solid $sh-color-gray-3
-    border-radius: 8px
-    width: 100%
-    font-weight: 500
-    font-size: 14px
-    color: $sh-color-dark-1
-    outline: none
-    height: 40px
-    padding: 10px 12px
-    background: $sh-color-gray-5
-    caret-color: $sh-color-blue-1
-    &:hover,
-    &-focused
-        border-color: $sh-color-gray-2
-    &::placeholder
-        font-size: 14px
-        color: $sh-color-gray-2
-
-.disabled
-    pointer-events: none
-    opacity: 0.8
-
-.resize
-    &-none
-        resize: none
-    &-both
-        resize: both
-    &-horizontal
-        resize: horizontal
-    &-vertical
-        resize: vertical
-
-</style>

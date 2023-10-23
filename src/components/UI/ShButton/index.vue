@@ -37,12 +37,12 @@ const emits = defineEmits<{
 
 const componentClasses = computed<(string | object)[]>(() => {
     return [
-        'size-' + props.size,
-        'variant-' + props.variant,
-        'type-' + props.type,
+        'sh-button_size-' + props.size,
+        'sh-button_variant-' + props.variant,
+        'sh-button_type-' + props.type,
         {
-            'loading': props.isLoading,
-            'disabled': props.isDisabled,
+            'sh-button_loading': props.isLoading,
+            'sh-button_disabled': props.isDisabled,
         },
     ];
 });

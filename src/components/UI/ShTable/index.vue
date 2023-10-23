@@ -1,5 +1,5 @@
 <template lang="pug">
-.table-wrap(:style="{ height }")
+.sh-table-wrap(:style="{ height }")
     table.table
         thead.header
             tr.header-row
@@ -39,45 +39,3 @@ withDefaults(
 );
 
 </script>
-
-<style lang="sass" scoped>
-.table-wrap
-    width: 100%
-    color: $sh-color-dark-1
-    border-radius: 8px
-    border: 1px solid $sh-color-gray-3
-    overflow: auto
-
-.table
-    width: 100%
-    border-spacing: 0
-
-.header
-    position: sticky
-    top: 0
-    background: $sh-color-white-1
-    &-row
-        @extend %sh-flex_row
-        border-bottom: 2px solid $sh-color-gray-3
-    &-item
-        padding: 8px 6px
-        flex: 1 1 0
-        font-weight: 600
-        border-right: 1px solid $sh-color-gray-3
-        &:last-child
-            border-right: none
-
-.body
-    &-row
-        @extend %sh-flex_row
-        border-bottom: 1px solid $sh-color-gray-3
-        &:last-child
-            border-bottom: none
-    &-column
-        padding: 8px 6px
-        flex: 1 1 0
-        border-right: 1px solid $sh-color-gray-3
-        &:last-child
-            border-right: none
-
-</style>

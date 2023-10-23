@@ -33,13 +33,13 @@
                 100%
                     transform: rotate(360deg)
 
-    .loading
+    &_loading
         pointer-events: none
         opacity: 0.9
         .text
             opacity: 0
 
-    .disabled
+    &_disabled
         opacity: 0.8
         cursor: not-allowed
         &.button
@@ -48,7 +48,7 @@
             &:active
                 opacity: 0.8
 
-    .size
+    &_size
         &-small
             height: 32px
             font-size: 14px
@@ -60,27 +60,27 @@
             font-size: 18px
 
     @mixin getType($primary, $secondary)
-        &:is(.variant-default)
+        &:is(.sh-button_variant-default)
             background: $primary
             color: $secondary
             .loader-circle
                 border-color: $secondary
                 border-bottom-color: transparent
-        &:is(.variant-outline)
+        &:is(.sh-button_variant-outline)
             background: transparent
             border: 1px solid $primary
             color: $primary
             .loader-circle
                 border-color: $primary
                 border-bottom-color: transparent
-        &:is(.variant-text)
+        &:is(.sh-button_variant-text)
             background: transparent
             color: $primary
             .loader-circle
                 border-color: $primary
                 border-bottom-color: transparent
 
-    .type
+    &_type
         &-default
             @include getType($sh-color-dark-1, $sh-color-white-1)
         &-primary

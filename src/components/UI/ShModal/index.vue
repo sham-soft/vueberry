@@ -1,6 +1,6 @@
 <template lang="pug">
 teleport(to="#app")
-    .modal-wrap(@click.self="onClose")
+    .sh-modal-wrap(@click.self="onClose")
         .modal
             .header
                 .title
@@ -55,66 +55,3 @@ function onClickOk() {
 }
 
 </script>
-
-<style lang="sass" scoped>
-.modal-wrap
-    @extend %sh-flex_row-center-center
-    position: fixed
-    width: 100%
-    height: 100%
-    top: 0
-    left: 0
-    z-index: 2
-    background: rgb($sh-color-dark-1, 0.8)
-
-.modal
-    @extend %sh-flex_column-between
-    background: $sh-color-white-1
-    min-width: 300px
-    border-radius: 8px
-    overflow: hidden
-    color: $sh-color-dark-1
-    font-weight: 500
-
-.header
-    @extend %sh-flex_row-center-between
-    background: $sh-color-gray-4
-    padding: 15px
-    font-size: 24px
-
-.icon
-    width: 25px
-    height: 25px
-    cursor: pointer
-    background-image: sh-icon-clear($sh-color-gray-2)
-
-.text
-    margin: 40px 0
-    padding: 0 20px
-    font-size: 18px
-
-.footer
-    @extend %sh-flex_row-center-end
-    background: $sh-color-gray-4
-    padding: 15px
-    font-size: 16px
-
-.button-no
-    @extend %sh-flex_row-center-center
-    width: 60px
-    background: $sh-color-white-1
-    border: 1px solid $sh-color-gray-1
-    border-radius: 4px
-    padding: 5px 10px
-
-.button-ok
-    @extend %sh-flex_row-center-center
-    width: 60px
-    margin-left: 15px
-    color: $sh-color-white-1
-    border: 1px solid $sh-color-blue-1
-    background: $sh-color-blue-1
-    border-radius: 4px
-    padding: 5px 10px
-
-</style>
