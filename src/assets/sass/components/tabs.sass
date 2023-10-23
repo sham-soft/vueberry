@@ -1,5 +1,6 @@
 .sh-tabs
-    @extend %sh-flex_row
+    display: flex
+    flex-direction: row
     color: $sh-color-dark-1
 
     .tab
@@ -12,7 +13,8 @@
             border-bottom: 2px solid $sh-color-blue-1
 
 .sh-tabs_column
-    @extend %sh-flex_column
+    display: flex
+    flex-direction: column
     .tab
         margin-right: 0
         margin-top: 10px

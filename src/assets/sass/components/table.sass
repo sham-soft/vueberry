@@ -14,7 +14,8 @@
         top: 0
         background: $sh-color-white-1
         &-row
-            @extend %sh-flex_row
+            display: flex
+            flex-direction: row
             border-bottom: 2px solid $sh-color-gray-3
         &-item
             padding: 8px 6px
@@ -26,7 +27,8 @@
 
     .body
         &-row
-            @extend %sh-flex_row
+            display: flex
+            flex-direction: row
             border-bottom: 1px solid $sh-color-gray-3
             &:last-child
                 border-bottom: none

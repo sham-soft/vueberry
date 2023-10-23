@@ -7,7 +7,9 @@
         margin-bottom: 5px
 
     .field-wrap
-        @extend %sh-flex_row-center
+        display: flex
+        flex-direction: row
+        align-items: center
 
     .icon-clip
         min-width: 30px
@@ -17,7 +19,10 @@
         background-image: sh-icon-clip($sh-color-gray-2)
 
     .field
-        @extend %sh-flex_row-center-between
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
         position: relative
         border: 1px solid $sh-color-gray-3
         border-radius: 8px

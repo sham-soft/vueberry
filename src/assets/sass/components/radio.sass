@@ -6,10 +6,14 @@
         margin-bottom: 12px
 
     .button-group
-        @extend %sh-flex_row-center
+        display: flex
+        flex-direction: row
+        align-items: center
 
     .button
-        @extend %sh-flex_row-center
+        display: flex
+        flex-direction: row
+        align-items: center
         margin-left: 32px
         &:first-child
             margin-left: 0
@@ -55,7 +59,10 @@
 
 .sh-radio:has(.group-column)
     .button-group
-        @extend %sh-flex_column-start-start
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: flex-start
     .button
         margin-top: 15px
         margin-left: 0

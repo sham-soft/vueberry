@@ -38,7 +38,10 @@
         color: $sh-color-dark-1
 
     .calendar-heaeder
-        @extend %sh-flex_row-center-between
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
 
     .prev, .next
         min-width: 35px
@@ -70,7 +73,9 @@
         margin-top: 15px
 
     .week
-        @extend %sh-flex_row-center
+        display: flex
+        flex-direction: row
+        align-items: center
         padding-bottom: 10px
         border-bottom: 2px solid $sh-color-gray-3
 
@@ -82,11 +87,16 @@
         margin-top: 10px
 
     .day-row
-        @extend %sh-flex_row-center
+        display: flex
+        flex-direction: row
+        align-items: center
         margin-top: 10px
 
     .day
-        @extend %sh-flex_row-center-center
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: center
         color: $sh-color-dark-1
         width: 30px
         height: 30px

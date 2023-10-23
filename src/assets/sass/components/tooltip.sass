@@ -1,5 +1,8 @@
 .sh-tooltip-wrap
-    @extend %sh-flex_row-center-center
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
     position: absolute
     left: 0
     top: 0
@@ -12,7 +15,10 @@
             animation: slowlyAppear 0.3s ease-in-out
 
     .tooltip
-        @extend %sh-flex_row-center-center
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: center
         position: absolute
         background: rgb($sh-color-gray-1, 0.9)
         padding: 10px 20px

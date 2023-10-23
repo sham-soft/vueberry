@@ -87,7 +87,9 @@ function onBlur(): void {
 
 <style lang="sass" scoped>
 .input
-    @extend %sh-flex_row-center
+    display: flex
+    flex-direction: row
+    align-items: center
     border: 1px solid $sh-color-gray-3
     border-radius: 8px
     padding: 0 12px
