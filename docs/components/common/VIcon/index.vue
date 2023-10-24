@@ -8,7 +8,7 @@
         v-if="format === 'svg'"
         :style="{ width, height, fill, stroke }"
     )
-        use(:xlink:href="path + '#' + name")
+        use(:xlink:href="imageUrl + '#' + name")
 
     img.icon__img(
         v-else
@@ -42,6 +42,8 @@ const emit = defineEmits<{
 
 const name = computed<string>(() => props.path.substring(props.path.indexOf('/') + 1, props.path.lastIndexOf('.')));
 const format = computed<string>(() => props.path.substring(props.path.lastIndexOf('.') + 1));
+
+const imageUrl = new URL(`../../../assets/${props.path}`, import.meta.url).href;
 </script>
 
 <style lang="sass" scoped>

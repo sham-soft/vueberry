@@ -120,7 +120,7 @@ defineEmits<{
 .radio__input:checked + label::before
     border-color: $color-blue-1
     background-color: transparent
-    background-image: url('/img/radioMark.svg')
+    background-image: url('../../../assets/img/radioMark.svg')
 
 /* стили для чекбокса, находящегося в состоянии disabled */
 .radio__input:disabled + label::before

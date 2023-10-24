@@ -4,6 +4,7 @@
 
 <style lang="sass">
 @import 'normalize.css/normalize.css'
+@import './assets/sass/fonts.sass'
 
 #app
     font-family: SFProDisplay, Avenir, Helvetica, Arial, sans-serif
