@@ -1,5 +1,6 @@
 import { fileURLToPath, URL } from 'node:url';
 
+import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 
@@ -22,6 +23,21 @@ export default defineConfig({
     server: {
         watch: {
             usePolling: true, // Чтобы работал vite-hot-reload
+        },
+    },
+    build: {
+        lib: {
+            entry: resolve(__dirname, 'src/index.ts'),
+            name: 'ShamUI',
+            fileName: (format) => `sham-ui.${format}.js`,
+        },
+        rollupOptions: {
+            external: ['vue'],
+            output: {
+                globals: {
+                    vue: 'Vue',
+                },
+            },
         },
     },
 });

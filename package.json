@@ -1,7 +1,19 @@
 {
     "name": "sham-ui-vue",
-    "version": "0.0.0",
-    "private": true,
+    "version": "0.0.1",
+    "main": "./dist/sham-ui.umd.js",
+    "module": "./dist/sham-ui.es.js",
+    "exports": {
+        ".": {
+            "import": "./dist/sham-ui.es.js",
+            "require": "./dist/sham-ui.umd.js"
+        },
+        "./dist/style.css": "./dist/style.css"
+    },
+    "files": [
+        "dist",
+        "src"
+    ],
     "scripts": {
         "dev": "vite",
         "build": "run-p type-check build-only",
