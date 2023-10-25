@@ -46,7 +46,7 @@ import apiJSON from '@/pages/Select/api.json';
 import optionsJSON from '@/pages/Select/options.json';
 import parametersJSON from '@/pages/Select/parameters.json';
 import { useParameter } from '@/composables/playground';
-import type { TypeOption } from '../../../src/components/UI/ShSelect/types';
+import type { TypeOption } from '../../../src/components/ShSelect/types';
 import type { TypeApiTable } from '@/components/common/VApiTable/types';
 import type { TypeParameter, TypeData } from '@/components/common/VPlayground/types';
 

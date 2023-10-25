@@ -36,7 +36,7 @@ import apiJSON from '@/pages/Breadcrumbs/api.json';
 import optionsJSON from '@/pages/Breadcrumbs/options.json';
 import parametersJSON from '@/pages/Breadcrumbs/parameters.json';
 import { useParameter } from '@/composables/playground';
-import type { TypeCrumb } from '../../../src/components/UI/ShBreadcrumbs/types';
+import type { TypeCrumb } from '../../../src/components/ShBreadcrumbs/types';
 import type { TypeApiTable } from '@/components/common/VApiTable/types';
 import type { TypeParameter } from '@/components/common/VPlayground/types';
 
