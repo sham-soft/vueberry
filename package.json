@@ -1,6 +1,6 @@
 {
     "name": "sham-ui-vue",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "main": "./dist/sham-ui.umd.js",
     "module": "./dist/sham-ui.es.js",
     "exports": {
