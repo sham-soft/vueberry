@@ -52,10 +52,10 @@
 
 <script setup lang="ts">
 import { ref, computed, toRef } from 'vue';
-import VInput from '../../common/VInput/index.vue';
-import VCheckbox from '../../common/VCheckBox/index.vue';
+import VInput from '../ShInput/index.vue';
+import VCheckbox from '../ShCheckbox/index.vue';
 import type { TypeOption } from './types';
-import { useLabel } from '../../../composables/label';
+import { useLabel } from '../../composables/label';
 
 type TypeModelValue = string | string[];
 

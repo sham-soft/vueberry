@@ -25,7 +25,7 @@
 
 <script setup lang="ts">
 import { computed, toRef } from 'vue';
-import { useLabel } from '../../../composables/label';
+import { useLabel } from '../../composables/label';
 
 interface TypeRadio {
     id: string | number,

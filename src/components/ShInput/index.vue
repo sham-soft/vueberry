@@ -1,5 +1,5 @@
 <template lang="pug">
-.input(
+.sh-input(
     :class="inputClasses"
     @click="clickInput"
 )
@@ -55,8 +55,8 @@ const emit = defineEmits<{
 
 const inputClasses = computed<object>(() => {
     return {
-        'input_focused': isFocus.value,
-        'disabled': props.isDisabled,
+        'sh-input_focused': isFocus.value,
+        'sh-input_disabled': props.isDisabled,
     };
 });
 
@@ -84,37 +84,3 @@ function onBlur(): void {
 }
 
 </script>
-
-<style lang="sass" scoped>
-.input
-    display: flex
-    flex-direction: row
-    align-items: center
-    border: 1px solid $sh-color-gray-3
-    border-radius: 8px
-    padding: 0 12px
-    height: 40px
-    cursor: text
-    background: $sh-color-gray-5
-    &:hover,
-    &_focused
-        border-color: $sh-color-gray-2
-
-.field
-    width: 100%
-    font-weight: 500
-    font-size: 14px
-    color: $sh-color-dark-1
-    outline: none
-    border: none
-    background: transparent
-    caret-color: $sh-color-blue-1
-    &::placeholder
-        font-size: 14px
-        color: $sh-color-gray-2
-
-.disabled
-    pointer-events: none
-    opacity: 0.8
-
-</style>

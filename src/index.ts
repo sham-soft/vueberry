@@ -1,5 +1,6 @@
 import type { App } from 'vue';
-import * as components from './components/UI';
+import * as components from './components';
+import './sass/main.sass';
 
 export default {
     install: (app: App) => {

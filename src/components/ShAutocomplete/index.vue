@@ -37,8 +37,8 @@
 
 <script setup lang="ts">
 import { ref, computed, toRef } from 'vue';
-import VInput from '../../common/VInput/index.vue';
-import { useLabel } from '../../../composables/label';
+import VInput from '../ShInput/index.vue';
+import { useLabel } from '../../composables/label';
 
 const props = withDefaults(
     defineProps<{

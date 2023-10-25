@@ -32,9 +32,9 @@
 
 <script setup lang="ts">
 import { computed, toRef } from 'vue';
-import VInput from '../../common/VInput/index.vue';
-import formatters from '../../../helpers/formatters';
-import { useLabel } from '../../../composables/label';
+import VInput from '../ShInput/index.vue';
+import formatters from '../../helpers/formatters';
+import { useLabel } from '../../composables/label';
 
 const props = withDefaults(
     defineProps<{
