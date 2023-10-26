@@ -4,23 +4,30 @@ aside.sidebar
         router-link(to="/") ShamUI
         .version V 1.0
 
-    .components
-        .components-title
-            span COMPONENTS
-            span {{ links.length }}
-
-        router-link.components-link(
-            v-for="link in links"
-            active-class="components-link_active"
-            :key="link.id"
-            :to="link.path"
+    .navigation
+        .list-group(
+            v-for="nav in navList"
+            :key="nav.id"
+            @click="setActiveList(nav.id)"
         )
-            | {{ link.name }}
-            v-icon.components-link-icon(path="img/arrow.svg")
+            .list-title
+                span {{ nav.title }}
+                span {{ nav.linksCount }}
+
+            template(v-if="activeListId === nav.id")
+                router-link.list-link(
+                    v-for="link in nav.links"
+                    active-class="link_active"
+                    :key="link.id"
+                    :to="link.path"
+                )
+                    | {{ link.name }}
+                    v-icon.link-icon(path="img/arrow.svg")
 
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import VIcon from '@/components/common/VIcon/index.vue';
 
 type TypeLink = {
@@ -29,23 +36,50 @@ type TypeLink = {
     path: string,
 }
 
-const links: TypeLink[] = [
-    { id: 'auto', name: 'Autocomplete', path: '/autocomplete' },
-    { id: 'crumbs', name: 'Breadcrumbs', path: '/breadcrumbs' },
-    { id: 'button', name: 'Button', path: '/button' },
-    { id: 'checkbox', name: 'Checkbox', path: '/checkbox' },
-    { id: 'date', name: 'Datepicker', path: '/datepicker' },
-    { id: 'file', name: 'FileInput', path: '/file-input' },
-    { id: 'modal', name: 'Modal', path: '/modal' },
-    { id: 'pagination', name: 'Pagination', path: '/pagination' },
-    { id: 'radio', name: 'RadioButton', path: '/radio-button' },
-    { id: 'select', name: 'Select', path: '/select' },
-    { id: 'table', name: 'Table', path: '/table' },
-    { id: 'tabs', name: 'Tabs', path: '/tabs' },
-    { id: 'textarea', name: 'Textarea', path: '/textarea' },
-    { id: 'text', name: 'TextField', path: '/text-field' },
-    { id: 'tooltip', name: 'Tooltip', path: '/tooltip' },
+type TypeNav = {
+    id: string,
+    title: string,
+    links: TypeLink[],
+    linksCount?: number,
+}
+
+const startLinks: TypeLink[] = [
+    { id: 'install', name: 'Installation', path: '/getting-started/installation' },
 ];
+
+const componentLinks: TypeLink[] = [
+    { id: 'auto', name: 'Autocomplete', path: '/components/autocomplete' },
+    { id: 'crumbs', name: 'Breadcrumbs', path: '/components/breadcrumbs' },
+    { id: 'button', name: 'Button', path: '/components/button' },
+    { id: 'checkbox', name: 'Checkbox', path: '/components/checkbox' },
+    { id: 'date', name: 'Datepicker', path: '/components/datepicker' },
+    { id: 'file', name: 'FileInput', path: '/components/file-input' },
+    { id: 'modal', name: 'Modal', path: '/components/modal' },
+    { id: 'pagination', name: 'Pagination', path: '/components/pagination' },
+    { id: 'radio', name: 'RadioButton', path: '/components/radio-button' },
+    { id: 'select', name: 'Select', path: '/components/select' },
+    { id: 'table', name: 'Table', path: '/components/table' },
+    { id: 'tabs', name: 'Tabs', path: '/components/tabs' },
+    { id: 'textarea', name: 'Textarea', path: '/components/textarea' },
+    { id: 'text', name: 'TextField', path: '/components/text-field' },
+    { id: 'tooltip', name: 'Tooltip', path: '/components/tooltip' },
+];
+
+const snippetLinks: TypeLink[] = [
+    { id: 'format', name: 'Formatters', path: '/snippets/formatters' },
+];
+
+const navList: TypeNav[] = [
+    { id: 'start', title: 'GETTING STARTED', links: startLinks },
+    { id: 'component', title: 'COMPONENTS', links: componentLinks, linksCount: componentLinks.length },
+    { id: 'snippet', title: 'SNIPPETS', links: snippetLinks, linksCount: snippetLinks.length },
+];
+
+const activeListId = ref<string>(navList[0].id);
+
+function setActiveList(id: string) {
+    activeListId.value = id;
+}
 </script>
 
 <style scoped lang="sass">
@@ -73,8 +107,8 @@ const links: TypeLink[] = [
     margin-left: 8px
     line-height: 12px
 
-.components
-    padding: 0 16px 32px 16px
+.navigation
+    padding: 16px 16px 32px 16px
     font-weight: 600
     overflow-y: auto
     height: calc(100% - 64px)
@@ -87,30 +121,33 @@ const links: TypeLink[] = [
         background-color: $color-gray-1
     &::-webkit-scrollbar-track
         background: $color-gray-3
-    &-title
-        @extend %flex_row-start-between
-        padding: 32px 16px 10px 16px
-        margin-bottom: 8px
-        color: rgb($color-white-1, 0.24)
-        position: sticky
-        top: 0px
-        background: $color-dark-1
-    &-link
-        @extend %flex_row-center-between
-        height: 44px
-        padding: 0 16px
-        border-radius: 8px
-        &:hover
-            background: rgb($color-white-1, 0.03)
 
-    &-link-icon
-        width: 20px
-        height: 20px
-        fill: transparent
-    &-link_active
-        background: rgb($color-white-1, 0.08)
-        .components-link-icon
-            fill: rgb($color-white-1, 0.5)
+.list-title
+    @extend %flex_row-start-between
+    padding: 10px 16px
+    color: rgb($color-white-1, 0.24)
+    background: $color-dark-1
+    cursor: pointer
+    &:hover
+        background: rgb($color-white-1, 0.03)
+
+.list-link
+    @extend %flex_row-center-between
+    height: 44px
+    padding: 0 16px
+    border-radius: 8px
+    &:hover
+        background: rgb($color-white-1, 0.03)
+
+.link-icon
+    width: 20px
+    height: 20px
+    fill: transparent
+
+.link_active
+    background: rgb($color-white-1, 0.08)
+    .link-icon
+        fill: rgb($color-white-1, 0.5)
 
 @media screen and (max-width: 1440px)
     .sidebar
