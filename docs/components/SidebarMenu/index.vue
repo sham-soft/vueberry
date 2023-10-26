@@ -45,6 +45,7 @@ type TypeNav = {
 
 const startLinks: TypeLink[] = [
     { id: 'install', name: 'Installation', path: '/getting-started/installation' },
+    { id: 'custom', name: 'Customization', path: '/getting-started/customization' },
 ];
 
 const componentLinks: TypeLink[] = [
@@ -95,6 +96,7 @@ function setActiveList(id: string) {
     font-size: 20px
     font-weight: 600
     border-bottom: 1px solid rgb($color-white-1, 0.08)
+    color: $color-white-1
 
 .version
     @extend %flex_row-center-center
@@ -136,6 +138,7 @@ function setActiveList(id: string) {
     height: 44px
     padding: 0 16px
     border-radius: 8px
+    color: $color-white-1
     &:hover
         background: rgb($color-white-1, 0.03)
 

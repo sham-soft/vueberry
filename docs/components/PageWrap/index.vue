@@ -28,11 +28,6 @@
     font-size: 48px
     color: $color-dark-1
 
-.sub-title
-    font-weight: 600
-    font-size: 38px
-    color: $color-dark-1
-
 .text
     color: $color-dark-1
     line-height: 28px
