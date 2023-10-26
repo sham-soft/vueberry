@@ -2,12 +2,12 @@
     {
         "id": "auto",
         "title": "Autocomplete",
-        "url": "/autocomplete"
+        "url": "/components/autocomplete"
     },
     {
         "id": "select",
         "title": "Select",
-        "url": "/select"
+        "url": "/components/select"
     },
     {
         "id": "bread",

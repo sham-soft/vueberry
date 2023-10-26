@@ -41,12 +41,12 @@ import { reactive } from 'vue';
 import PageWrap from '@/components/PageWrap/index.vue';
 import VApiTable from '@/components/common/VApiTable/index.vue';
 import VPlayground from '@/components/common/VPlayground/index.vue';
-import codeSelect from '@/pages/Select/code';
-import apiJSON from '@/pages/Select/api.json';
-import optionsJSON from '@/pages/Select/options.json';
-import parametersJSON from '@/pages/Select/parameters.json';
+import codeSelect from '@/pages/components/Select/code';
+import apiJSON from '@/pages/components/Select/api.json';
+import optionsJSON from '@/pages/components/Select/options.json';
+import parametersJSON from '@/pages/components/Select/parameters.json';
 import { useParameter } from '@/composables/playground';
-import type { TypeOption } from '../../../src/components/ShSelect/types';
+import type { TypeOption } from '../../../../src/components/ShSelect/types';
 import type { TypeApiTable } from '@/components/common/VApiTable/types';
 import type { TypeParameter, TypeData } from '@/components/common/VPlayground/types';
 

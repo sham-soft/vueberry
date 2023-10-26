@@ -6,7 +6,7 @@
     .title Vue Component Library
 
     .buttons
-        router-link.button-start(to="/autocomplete")
+        router-link.button-start(to="/getting-started/installation")
             v-button GET STARTED
         a.button-git(
             href="https://github.com/code-build-project/sham-ui-vue"
