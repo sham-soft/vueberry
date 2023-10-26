@@ -21,7 +21,7 @@ const router = createRouter({
                 {
                     path: 'installation',
                     name: 'GettingStartedInstallation',
-                    component: () => import('@/pages/GettingStarted/Installation/index.vue'),
+                    component: () => import('@/pages/gettingStarted/Installation/index.vue'),
                 },
             ],
         },
@@ -113,7 +113,7 @@ const router = createRouter({
                 {
                     path: 'formatters',
                     name: 'SnippetFormatters',
-                    component: () => import('@/pages/Snippets/Formatters/index.vue'),
+                    component: () => import('@/pages/snippets/Formatters/index.vue'),
                 },
             ],
         },
