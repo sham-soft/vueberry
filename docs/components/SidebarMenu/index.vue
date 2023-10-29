@@ -8,21 +8,20 @@ aside.sidebar
         .list-group(
             v-for="nav in navList"
             :key="nav.id"
-            @click="setActiveList(nav.id)"
+            :class="getGroupClasses(nav.id)"
         )
-            .list-title
+            .list-title(@click="setActiveList(nav.id)")
                 span {{ nav.title }}
-                span {{ nav.linksCount }}
+                v-icon.bracket-icon(path="img/bracket.svg")
 
-            template(v-if="activeListId === nav.id")
-                router-link.list-link(
-                    v-for="link in nav.links"
-                    active-class="link_active"
-                    :key="link.id"
-                    :to="link.path"
-                )
-                    | {{ link.name }}
-                    v-icon.link-icon(path="img/arrow.svg")
+            router-link.list-link(
+                v-for="link in nav.links"
+                active-class="link_active"
+                :key="link.id"
+                :to="link.path"
+            )
+                | {{ link.name }}
+                v-icon.link-icon(path="img/arrow.svg")
 
 </template>
 
@@ -40,7 +39,6 @@ type TypeNav = {
     id: string,
     title: string,
     links: TypeLink[],
-    linksCount?: number,
 }
 
 const startLinks: TypeLink[] = [
@@ -72,14 +70,24 @@ const snippetLinks: TypeLink[] = [
 
 const navList: TypeNav[] = [
     { id: 'start', title: 'GETTING STARTED', links: startLinks },
-    { id: 'component', title: 'COMPONENTS', links: componentLinks, linksCount: componentLinks.length },
-    { id: 'snippet', title: 'SNIPPETS', links: snippetLinks, linksCount: snippetLinks.length },
+    { id: 'component', title: 'COMPONENTS', links: componentLinks },
+    { id: 'snippet', title: 'SNIPPETS', links: snippetLinks },
 ];
 
-const activeListId = ref<string>(navList[0].id);
+const activeListId = ref<string[]>([]);
 
 function setActiveList(id: string) {
-    activeListId.value = id;
+    if (activeListId.value.includes(id)) {
+        activeListId.value.splice(activeListId.value.indexOf(id), 1);
+    } else {
+        activeListId.value.push(id);
+    }
+}
+
+function getGroupClasses(id: string) {
+    return {
+        [`list-group-${id}`]: activeListId.value.includes(id),
+    };
 }
 </script>
 
@@ -124,14 +132,31 @@ function setActiveList(id: string) {
     &::-webkit-scrollbar-track
         background: $color-gray-3
 
+.list-group
+    max-height: 39px
+    transition: all 0.5s ease
+    overflow: hidden
+    &-start, &-snippet
+        max-height: 150px
+    &-component
+        max-height: 750px
+    &-start, &-component, &-snippet
+        .bracket-icon
+                transform: rotate(180deg)
+
 .list-title
-    @extend %flex_row-start-between
+    @extend %flex_row-center-between
     padding: 10px 16px
     color: rgb($color-white-1, 0.24)
     background: $color-dark-1
     cursor: pointer
     &:hover
         background: rgb($color-white-1, 0.03)
+
+.bracket-icon
+    width: 23px
+    height: 23px
+    fill: rgb($color-white-1, 0.24)
 
 .list-link
     @extend %flex_row-center-between
