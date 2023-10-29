@@ -7,40 +7,39 @@
             | ShamUI - это набор готовых решений, который упростит создание
             | ваших многофункциональных и быстрых приложений.
 
-        h3.sub-title Installation
+        template(
+            v-for="data in dataList"
+            :key="data.id"
+        )
+            h3.sub-title {{ data.title }}
 
-        p.text Вы можете установить ShamUI с помощью npm или yarn:
+            p.text {{ data.text }}
 
-        .code
-            .code-header Npm or Yarn
-            .code-template(v-html="codeInstall")
-
-        h3.sub-title Usage
-
-        p.text Чтобы использовать ShamUI в своем приложении, вам необходимо импортировать компоненты, а так же стили.
-
-        .code
-            .code-header Full bundle
-            .code-template(v-html="codeUsage")
+            .code
+                .code-header {{ data.codeHeader }}
+                .code-template(v-html="data.codeTemplate")
 
 </template>
 
 <script setup lang="ts">
-/* eslint-disable max-len */
-const codeInstall = `
-<pre>
- <code id="htmlViewer" style="color:rgb(47, 51, 55); font-weight:400;display:block;padding: .5em;"><span style="color:rgb(84, 121, 13); font-weight:400;">$ </span>npm install sham-ui-vue --save
-<span style="color:rgb(84, 121, 13); font-weight:400;">$ </span>yarn add sham-ui-vue</code></pre>
-`;
+import { codeInstall, codeUsage } from '@/pages/gettingStarted/Installation/code';
 
-const codeUsage = `
-<pre>
- <code id="htmlViewer" style="color:rgb(47, 51, 55); font-weight:400;display:block;padding: .5em;"><span style="color:rgb(1, 86, 146); font-weight:400;">import</span> <span class="hljs-title class_">Vue</span> <span style="color:rgb(1, 86, 146); font-weight:400;">from</span> <span style="color:rgb(84, 121, 13); font-weight:400;">&#x27;vue&#x27;</span>
-<span style="color:rgb(1, 86, 146); font-weight:400;">import</span> <span class="hljs-title class_">ShamUI</span> <span style="color:rgb(1, 86, 146); font-weight:400;">from</span> <span style="color:rgb(84, 121, 13); font-weight:400;">&#x27;sham-ui-vue&#x27;</span>
-<span style="color:rgb(1, 86, 146); font-weight:400;">import</span> <span style="color:rgb(84, 121, 13); font-weight:400;">&#x27;sham-ui-vue/dist/style.css&#x27;</span>
-
-<span class="hljs-title class_">Vue</span>.<span class="hljs-title function_">use</span>(<span class="hljs-title class_">ShamUI</span>)</code></pre>
-`;
+const dataList = [
+    {
+        id: 'install',
+        title: 'Installation',
+        text: 'Вы можете установить ShamUI с помощью npm или yarn:',
+        codeHeader: 'Npm or Yarn',
+        codeTemplate: codeInstall,
+    },
+    {
+        id: 'usage',
+        title: 'Usage',
+        text: 'Чтобы использовать ShamUI в своем приложении, вам необходимо импортировать компоненты, а так же стили.',
+        codeHeader: 'Full bundle',
+        codeTemplate: codeUsage,
+    },
+];
 </script>
 
 <style scoped lang="sass">
