@@ -17,6 +17,7 @@ const router = createRouter({
         {
             path: '/getting-started',
             component: () => import('@/layouts/MainLayout/index.vue'),
+            redirect: '/getting-started/installation',
             children: [
                 {
                     path: 'installation',
@@ -33,6 +34,7 @@ const router = createRouter({
         {
             path: '/components',
             component: () => import('@/layouts/MainLayout/index.vue'),
+            redirect: '/components/autocomplete',
             children: [
                 {
                     path: 'autocomplete',
@@ -114,6 +116,7 @@ const router = createRouter({
         {
             path: '/snippets',
             component: () => import('@/layouts/MainLayout/index.vue'),
+            redirect: '/snippets/formatters',
             children: [
                 {
                     path: 'formatters',

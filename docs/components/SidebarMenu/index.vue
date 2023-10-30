@@ -27,6 +27,7 @@ aside.sidebar
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useRoute } from 'vue-router';
 import VIcon from '@/components/common/VIcon/index.vue';
 
 type TypeLink = {
@@ -69,12 +70,21 @@ const snippetLinks: TypeLink[] = [
 ];
 
 const navList: TypeNav[] = [
-    { id: 'start', title: 'GETTING STARTED', links: startLinks },
-    { id: 'component', title: 'COMPONENTS', links: componentLinks },
-    { id: 'snippet', title: 'SNIPPETS', links: snippetLinks },
+    { id: 'getting-started', title: 'GETTING STARTED', links: startLinks },
+    { id: 'components', title: 'COMPONENTS', links: componentLinks },
+    { id: 'snippets', title: 'SNIPPETS', links: snippetLinks },
 ];
 
-const activeListId = ref<string[]>([]);
+const route = useRoute();
+
+function getACtiveNav() {
+    const splitPath = route.fullPath.split('/');
+    const activeNav = navList.find((item) => item.id === splitPath[1]);
+
+    return activeNav?.id || navList[0].id;
+}
+
+const activeListId = ref<string[]>([getACtiveNav()]);
 
 function setActiveList(id: string) {
     if (activeListId.value.includes(id)) {
@@ -124,6 +134,7 @@ function getGroupClasses(id: string) {
     height: calc(100% - 64px)
     scrollbar-width: thin
     scrollbar-color: $color-gray-1
+    scrollbar-gutter: stable
     &::-webkit-scrollbar
         height: 6px
         width: 6px
@@ -136,11 +147,11 @@ function getGroupClasses(id: string) {
     max-height: 39px
     transition: all 0.5s ease
     overflow: hidden
-    &-start, &-snippet
+    &-getting-started, &-snippets
         max-height: 150px
-    &-component
+    &-components
         max-height: 750px
-    &-start, &-component, &-snippet
+    &-getting-started, &-components, &-snippets
         .bracket-icon
                 transform: rotate(180deg)
 
