@@ -1,33 +1,73 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template lang="pug">
 .main
-    .banner ShamUI
+    .header-wrap
+        .logo
+            router-link(to="/") ShamUI
+            .version V 1.0
+        header-block.header-block
 
-    .title Vue Component Library
+    .content
+        .banner ShamUI
 
-    .buttons
-        router-link.button-start(to="/getting-started/installation")
-            v-button GET STARTED
-        a.button-git(
-            href="https://github.com/code-build-project/sham-ui-vue"
-            target="_blank"
-        )
-            v-button
-                v-icon.icon(path="img/github.svg")
-                | GITHUB
+        .title Vue Component Library
+
+        .buttons
+            router-link.button-start(to="/getting-started/installation")
+                v-button GET STARTED
+            a.button-git(
+                href="https://github.com/code-build-project/sham-ui-vue"
+                target="_blank"
+            )
+                v-button
+                    v-icon.icon(path="img/github.svg")
+                    | GITHUB
 
 </template>
 
 <script setup lang="ts">
 import VIcon from '@/components/common/VIcon/index.vue';
 import VButton from '@/components/common/VButton/index.vue';
+import HeaderBlock from '@/components/HeaderBlock/index.vue';
 
 </script>
 
 <style scoped lang="sass">
 .main
+    @extend %flex_column-start
+    width: 100%
+    max-height: calc(100vh - 64px)
+
+.header-wrap
+    @extend %flex_row
+
+.logo
+    @extend %flex_row-center
+    padding-left: 32px
+    font-size: 20px
+    font-weight: 600
+    border: 1px solid $color-gray-3
+    border-right: none
+
+.version
+    @extend %flex_row-center-center
+    width: 43px
+    height: 24px
+    background: rgb($color-dark-1, 0.08)
+    border-radius: 55px
+    font-weight: 600
+    font-size: 12px
+    margin-left: 8px
+    line-height: 12px
+
+.header-block
+    justify-content: flex-start
+    flex: auto
+    padding-left: 40px 
+    border-left: 1px solid transparent
+
+.content
     @extend %flex_column-start-center
-    padding: 10px
 
 .banner
     @extend %flex_row-center-center
