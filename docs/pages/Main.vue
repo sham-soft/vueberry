@@ -12,6 +12,8 @@
 
         .title Vue Component Library
 
+        .npm(v-html="codeNpm")
+
         .buttons
             router-link.button-start(to="/getting-started/installation")
                 v-button GET STARTED
@@ -29,6 +31,7 @@
 import VIcon from '@/components/common/VIcon/index.vue';
 import VButton from '@/components/common/VButton/index.vue';
 import HeaderBlock from '@/components/HeaderBlock/index.vue';
+import codeNpm from '@/pages/code';
 
 </script>
 
@@ -78,17 +81,22 @@ import HeaderBlock from '@/components/HeaderBlock/index.vue';
     color: $color-white-1
     background: rgb($color-dark-1, 0.96)
     border-radius: 32px
-    margin-top: 100px
+    margin-top: 80px
 
 .title
-    color: $color-dark-1
     font-size: 46px
     font-weight: 500
     margin-top: 50px
 
+.npm
+    background: $color-gray-5
+    border: 1px solid $color-gray-3
+    margin-top: 20px
+    padding: 0 15px 15px 15px
+
 .buttons
     @extend %flex_row
-    margin-top: 80px
+    margin-top: 40px
 
 .button-start, .button-git
     &:deep(.button)
@@ -99,6 +107,7 @@ import HeaderBlock from '@/components/HeaderBlock/index.vue';
         border-radius: 8px
         background: $color-blue-1
         color: $color-white-1
+        border: none
         &:hover
             box-shadow: 2px 2px 4px rgb($color-blue-1, 0.5)
         &:active

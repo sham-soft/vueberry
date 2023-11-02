@@ -72,7 +72,6 @@ defineEmits<{
     &__name
         font-size: 14px
         font-weight: 500
-        color: $color-dark-1
         margin-left: 8px
         cursor: pointer
 
@@ -82,7 +81,6 @@ defineEmits<{
 .radio__input + label
     display: inline-flex
     align-items: center
-    user-select: none
     padding-top: 2px
 
 /* создание в label псевдоэлемента before со следующими стилями */

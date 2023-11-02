@@ -166,7 +166,6 @@ function drag(e: MouseEvent): void {
     @extend %flex_row-center-between
     padding: 0 20px
     height: 56px
-    color: $color-dark-1
     font-weight: 600
     border-bottom: 1px solid $color-gray-3
     &-icons
@@ -201,7 +200,6 @@ function drag(e: MouseEvent): void {
         position: absolute
         right: 0
         cursor: col-resize
-        user-select: none
     &-dark
         background: $color-dark-1
 
@@ -215,7 +213,6 @@ function drag(e: MouseEvent): void {
     transition: all 0.5s linear
     overflow: hidden
     padding: 0 15px
-    user-select: text
     border-top: 1px solid $color-gray-3
     position: relative
     scrollbar-gutter: stable

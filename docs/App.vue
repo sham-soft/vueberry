@@ -24,7 +24,6 @@
 
 body
     margin: 0
-    user-select: none
 
 html,
 body,

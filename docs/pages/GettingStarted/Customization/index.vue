@@ -77,7 +77,6 @@ const dataList = [
     border-radius: 8px
     border: 1px solid $color-gray-3
     margin-top: 20px
-    user-select: text
     &-header
         padding: 15px 20px
         border-bottom: 1px solid $color-gray-3
