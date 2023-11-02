@@ -1,17 +1,22 @@
 <template lang="pug">
 .header
-    .search-wrap
-        v-input-search.search(
-            v-model="textButton"
-            placeholder="Search"
-        )
+    .logo
+        router-link(to="/") ShamUI
+        .version V 1.0
 
-    v-button.button(@click="isLike = true")
-        v-icon.button-icon(
-            :class="iconClasses"
-            path="img/heart.svg"
-        )
-        | Сказать спасибо автору
+    .control
+        .search-wrap
+            v-input-search.search(
+                v-model="textButton"
+                placeholder="Search"
+            )
+
+        v-button.button(@click="isLike = true")
+            v-icon.button-icon(
+                :class="iconClasses"
+                path="img/heart.svg"
+            )
+            | Сказать спасибо автору
 
 </template>
 
@@ -34,14 +39,37 @@ const iconClasses = computed<object>(() => {
 
 <style scoped lang="sass">
 .header
-    @extend %flex_row-center-center
+    @extend %flex_row
     height: 64px
-    border: 1px solid $color-gray-3
+
+.logo
+    @extend %flex_row-center
+    padding-left: 32px
+    font-size: 20px
+    font-weight: 600
+    width: 300px
+    height: 100%
+    border-bottom: 1px solid $color-gray-3
+
+.version
+    @extend %flex_row-center-center
+    width: 43px
+    height: 24px
+    background: rgb($color-dark-1, 0.08)
+    border-radius: 55px
+    font-weight: 600
+    font-size: 12px
+    margin-left: 8px
+    line-height: 12px
+
+.control
+    @extend %flex_row-center-center
+    flex: auto
+    border-bottom: 1px solid $color-gray-3
 
 .search-wrap
     @extend %flex_row-center-between
     width: 785px
-    height: 100%
 
 .search
     width: 211px
@@ -71,5 +99,9 @@ const iconClasses = computed<object>(() => {
     100%
         transform: scale(1)
         fill: $color-red-1
+
+@media screen and (max-width: 1440px)
+    .logo
+        width: 260px
 
 </style>

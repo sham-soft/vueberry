@@ -1,8 +1,8 @@
 <template lang="pug">
 .layout
-    sidebar-menu.sidebar-menu
+    header-block.header-block
     main.main-block
-        header-block
+        sidebar-menu.sidebar-menu
         router-view.content
 
 </template>
@@ -14,15 +14,25 @@ import SidebarMenu from '@/components/SidebarMenu/index.vue';
 
 <style lang="sass" scoped>
 .layout
-    @extend %flex_row
     height: 100%
 
+.header-block
+    &:deep(.logo)
+        background: $color-dark-1
+        color: $color-white-1
+        border-bottom: 1px solid rgb($color-white-1, 0.08)
+    &:deep(.version)
+        background: rgb($color-white-1, 0.08)
+
 .main-block
-    flex: auto
+    @extend %flex_row
+    // flex: auto
+    height: 100%
 
 .content
     @extend %flex_column-start
-    width: 100%
+    // width: 100%
+    flex: auto
     overflow-y: auto
     max-height: calc(100vh - 64px)
     scrollbar-gutter: stable

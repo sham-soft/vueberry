@@ -1,11 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template lang="pug">
 .main
-    .header-wrap
-        .logo
-            router-link(to="/") ShamUI
-            .version V 1.0
-        header-block.header-block
+    header-block
 
     .content
         .banner ShamUI
@@ -40,34 +36,6 @@ import codeNpm from '@/pages/code';
     @extend %flex_column-start
     width: 100%
     max-height: calc(100vh - 64px)
-
-.header-wrap
-    @extend %flex_row
-
-.logo
-    @extend %flex_row-center
-    padding-left: 32px
-    font-size: 20px
-    font-weight: 600
-    border: 1px solid $color-gray-3
-    border-right: none
-
-.version
-    @extend %flex_row-center-center
-    width: 43px
-    height: 24px
-    background: rgb($color-dark-1, 0.08)
-    border-radius: 55px
-    font-weight: 600
-    font-size: 12px
-    margin-left: 8px
-    line-height: 12px
-
-.header-block
-    justify-content: flex-start
-    flex: auto
-    padding-left: 40px 
-    border-left: 1px solid transparent
 
 .content
     @extend %flex_column-start-center

@@ -1,27 +1,22 @@
 <template lang="pug">
 aside.sidebar
-    .header
-        router-link(to="/") ShamUI
-        .version V 1.0
+    .list-group(
+        v-for="nav in navList"
+        :key="nav.id"
+        :class="getGroupClasses(nav.id)"
+    )
+        .list-title(@click="setActiveList(nav.id)")
+            span {{ nav.title }}
+            v-icon.bracket-icon(path="img/bracket.svg")
 
-    .navigation
-        .list-group(
-            v-for="nav in navList"
-            :key="nav.id"
-            :class="getGroupClasses(nav.id)"
+        router-link.list-link(
+            v-for="link in nav.links"
+            active-class="link_active"
+            :key="link.id"
+            :to="link.path"
         )
-            .list-title(@click="setActiveList(nav.id)")
-                span {{ nav.title }}
-                v-icon.bracket-icon(path="img/bracket.svg")
-
-            router-link.list-link(
-                v-for="link in nav.links"
-                active-class="link_active"
-                :key="link.id"
-                :to="link.path"
-            )
-                | {{ link.name }}
-                v-icon.link-icon(path="img/arrow.svg")
+            | {{ link.name }}
+            v-icon.link-icon(path="img/arrow.svg")
 
 </template>
 
@@ -106,28 +101,6 @@ function getGroupClasses(id: string) {
     width: 300px
     height: 100%
     background: $color-dark-1
-
-.header
-    @extend %flex_row-center
-    height: 64px
-    padding-left: 32px
-    font-size: 20px
-    font-weight: 600
-    border-bottom: 1px solid rgb($color-white-1, 0.08)
-    color: $color-white-1
-
-.version
-    @extend %flex_row-center-center
-    width: 43px
-    height: 24px
-    background: rgb($color-white-1, 0.08)
-    border-radius: 55px
-    font-weight: 600
-    font-size: 12px
-    margin-left: 8px
-    line-height: 12px
-
-.navigation
     padding: 16px 16px 32px 16px
     font-weight: 600
     overflow-y: auto
