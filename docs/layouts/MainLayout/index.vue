@@ -3,7 +3,8 @@
     header-block.header-block
     main.main-block
         sidebar-menu.sidebar-menu
-        router-view.content
+        .content
+            router-view
 
 </template>
 
@@ -26,12 +27,10 @@ import SidebarMenu from '@/components/SidebarMenu/index.vue';
 
 .main-block
     @extend %flex_row
-    // flex: auto
     height: 100%
 
 .content
-    @extend %flex_column-start
-    // width: 100%
+    @extend %flex_column-start-center
     flex: auto
     overflow-y: auto
     max-height: calc(100vh - 64px)

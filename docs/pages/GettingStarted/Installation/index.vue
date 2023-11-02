@@ -1,23 +1,22 @@
 <template lang="pug">
-.install-wrap
-    .install
-        h1.title Getting Started
+.install
+    h1.title Getting Started
 
-        p.intro
-            | ShamUI - это набор готовых решений, который упростит создание
-            | ваших многофункциональных и быстрых приложений.
+    p.intro
+        | ShamUI - это набор готовых решений, который упростит создание
+        | ваших многофункциональных и быстрых приложений.
 
-        template(
-            v-for="data in dataList"
-            :key="data.id"
-        )
-            h3.sub-title {{ data.title }}
+    template(
+        v-for="data in dataList"
+        :key="data.id"
+    )
+        h3.sub-title {{ data.title }}
 
-            p.text {{ data.text }}
+        p.text {{ data.text }}
 
-            .code
-                .code-header {{ data.codeHeader }}
-                .code-template(v-html="data.codeTemplate")
+        .code
+            .code-header {{ data.codeHeader }}
+            .code-template(v-html="data.codeTemplate")
 
 </template>
 
@@ -43,9 +42,6 @@ const dataList = [
 </script>
 
 <style scoped lang="sass">
-.install-wrap
-    @extend %flex_column-start-center
-
 .install
     width: 768px
     padding: 32px 0 80px 0

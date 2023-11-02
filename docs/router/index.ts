@@ -119,9 +119,24 @@ const router = createRouter({
             redirect: '/snippets/formatters',
             children: [
                 {
+                    path: 'files',
+                    name: 'SnippetFiles',
+                    component: () => import('@/pages/snippets/Files/index.vue'),
+                },
+                {
                     path: 'formatters',
                     name: 'SnippetFormatters',
                     component: () => import('@/pages/snippets/Formatters/index.vue'),
+                },
+                {
+                    path: 'notification',
+                    name: 'SnippetNotification',
+                    component: () => import('@/pages/snippets/Notification/index.vue'),
+                },
+                {
+                    path: 'validate',
+                    name: 'SnippetValidate',
+                    component: () => import('@/pages/snippets/Validate/index.vue'),
                 },
             ],
         },

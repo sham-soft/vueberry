@@ -1,17 +1,16 @@
 <template lang="pug">
-.formatters-wrap
-    .formatters
-        h1.title Formatters
+.formatters
+    h1.title Formatters
 
-        p.intro Набор решений для контроля ввода текста.
+    p.intro Набор решений для контроля ввода текста.
 
-        .code
-            .code-header Number
-            .code-template(v-html="codeNumber")
+    .code
+        .code-header Number
+        .code-template(v-html="codeNumber")
 
-        .code
-            .code-header Letter
-            .code-template(v-html="codeLetter")
+    .code
+        .code-header Letter
+        .code-template(v-html="codeLetter")
 
 </template>
 
@@ -33,9 +32,6 @@ const codeLetter = `
 </script>
 
 <style scoped lang="sass">
-.formatters-wrap
-    @extend %flex_column-start-center
-
 .formatters
     width: 768px
     padding: 32px 0 80px 0

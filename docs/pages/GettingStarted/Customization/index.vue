@@ -1,21 +1,20 @@
 <template lang="pug">
-.customization-wrap
-    .customization
-        h1.title Customization
+.customization
+    h1.title Customization
 
-        p.intro
-            | Если вы хотите изменить стили ShamUi по умолчанию (например, $sh-color-dark-1),
-            | вы должны использовать sass-файлы ShamUi.
+    p.intro
+        | Если вы хотите изменить стили ShamUi по умолчанию (например, $sh-color-dark-1),
+        | вы должны использовать sass-файлы ShamUi.
 
-        template(
-            v-for="data in dataList"
-            :key="data.id"
-        )
-            p.text {{ data.text }}
+    template(
+        v-for="data in dataList"
+        :key="data.id"
+    )
+        p.text {{ data.text }}
 
-            .code
-                .code-header {{ data.codeHeader }}
-                .code-template(v-html="data.codeTemplate")
+        .code
+            .code-header {{ data.codeHeader }}
+            .code-template(v-html="data.codeTemplate")
 
 </template>
 
@@ -48,9 +47,6 @@ const dataList = [
 </script>
 
 <style scoped lang="sass">
-.customization-wrap
-    @extend %flex_column-start-center
-
 .customization
     width: 768px
     padding: 32px 0 80px 0

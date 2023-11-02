@@ -61,7 +61,10 @@ const componentLinks: TypeLink[] = [
 ];
 
 const snippetLinks: TypeLink[] = [
+    { id: 'files', name: 'Files', path: '/snippets/files' },
     { id: 'format', name: 'Formatters', path: '/snippets/formatters' },
+    { id: 'notification', name: 'Notification', path: '/snippets/notification' },
+    { id: 'validate', name: 'Validate', path: '/snippets/validate' },
 ];
 
 const navList: TypeNav[] = [
@@ -120,13 +123,15 @@ function getGroupClasses(id: string) {
     max-height: 39px
     transition: all 0.5s ease
     overflow: hidden
-    &-getting-started, &-snippets
+    &-getting-started
         max-height: 150px
     &-components
         max-height: 750px
+    &-snippets
+        max-height: 250px
     &-getting-started, &-components, &-snippets
         .bracket-icon
-                transform: rotate(180deg)
+            transform: rotate(180deg)
 
 .list-title
     @extend %flex_row-center-between
