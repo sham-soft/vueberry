@@ -3,8 +3,12 @@
     h1.title Getting Started
 
     p.intro
-        | Vueberry - это набор готовых решений, который упростит создание
+        | Vueberry - это набор готовых решений без зависимостей, который упростит создание
         | ваших многофункциональных и быстрых приложений.
+
+    p.intro-uder
+        | Vueberry очень легкий и не имеет зависимостей, поэтому вы можете создать собственную песочницу,
+        | с собственными компонентами, используя Vueberry как фундаментальную основу.
 
     template(
         v-for="data in dataList"
@@ -51,11 +55,15 @@ const dataList = [
     font-size: 48px
 
 .intro
-    color: $color-dark-2
     margin-top: 12px
     font-size: 18px
-    padding-bottom: 30px
+    padding-bottom: 25px
     border-bottom: 2px solid $color-gray-3
+
+.intro-uder
+    color: $color-dark-2
+    margin-top: 10px
+    font-size: 16px
 
 .sub-title
     font-weight: 600

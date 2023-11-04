@@ -56,10 +56,9 @@ const dataList = [
     font-size: 48px
 
 .intro
-    color: $color-dark-2
     margin-top: 12px
     font-size: 18px
-    padding-bottom: 30px
+    padding-bottom: 25px
     border-bottom: 2px solid $color-gray-3
 
 .text
