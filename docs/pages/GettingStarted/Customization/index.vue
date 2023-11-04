@@ -3,8 +3,8 @@
     h1.title Customization
 
     p.intro
-        | Если вы хотите изменить стили ShamUi по умолчанию (например, $sh-color-dark-1),
-        | вы должны использовать sass-файлы ShamUi.
+        | Если вы хотите изменить стили Vueberry по умолчанию (например, $vb-color-dark-1),
+        | вы должны использовать sass-файлы Vueberry.
 
     template(
         v-for="data in dataList"
@@ -26,7 +26,7 @@ const dataList = [
         id: 'var',
         text: `
             Создайте свой собственный sass-файл (например, main.sass),
-            содержащий как ваши собственные sass-файлы, так и @import стилей ShamUi вконце:
+            содержащий как ваши собственные sass-файлы, так и @import стилей Vueberry вконце:
         `,
         codeHeader: 'Set your variables with Sass',
         codeTemplate: codeVariableStyles,

@@ -3,7 +3,7 @@
     h1.title Getting Started
 
     p.intro
-        | ShamUI - это набор готовых решений, который упростит создание
+        | Vueberry - это набор готовых решений, который упростит создание
         | ваших многофункциональных и быстрых приложений.
 
     template(
@@ -27,14 +27,14 @@ const dataList = [
     {
         id: 'install',
         title: 'Installation',
-        text: 'Вы можете установить ShamUI с помощью npm или yarn:',
+        text: 'Вы можете установить Vueberry с помощью npm или yarn:',
         codeHeader: 'Npm or Yarn',
         codeTemplate: codeInstall,
     },
     {
         id: 'usage',
         title: 'Usage',
-        text: 'Чтобы использовать ShamUI в своем приложении, вам необходимо импортировать компоненты, а так же стили.',
+        text: 'Чтобы использовать Vueberry в своем приложении, вам необходимо импортировать компоненты, а так же стили.',
         codeHeader: 'Full bundle',
         codeTemplate: codeUsage,
     },

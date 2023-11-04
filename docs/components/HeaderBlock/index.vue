@@ -1,7 +1,7 @@
 <template lang="pug">
 .header
     .logo
-        router-link(to="/") ShamUI
+        router-link(to="/") Vueberry
         .version V 1.0
 
     .control

@@ -1,6 +1,6 @@
 <template lang="pug">
-.sh-autocomplete
-    .label(v-if="isLabel")
+.vb-autocomplete
+    .vb-label(v-if="isLabel")
         slot {{ label }}
 
     v-input(
@@ -22,12 +22,12 @@
                 v-show="isIconClear"
                 @click.stop="clearField"
             )
-                .icon-clear
+                .vb-icon-clear
 
-    .message(v-if="message") {{ message }}
+    .vb-message(v-if="message") {{ message }}
 
-    ul.list(v-show="isShowList")
-        li.item(
+    ul.vb-list(v-show="isShowList")
+        li.vb-item(
             v-for="(option, index) in filteredOptions"
             :key="option + index"
             @click="updateValue(option)"
@@ -81,10 +81,10 @@ function updateValue(value: number | string) {
 
 const componentClasses = computed<(string | object)[]>(() => {
     return [
-        'size-' + props.size,
-        'variant-' + props.variant,
+        'vb-size-' + props.size,
+        'vb-variant-' + props.variant,
         {
-            'error': props.isError,
+            'vb-error': props.isError,
         },
     ];
 });

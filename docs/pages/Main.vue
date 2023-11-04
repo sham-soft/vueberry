@@ -4,7 +4,7 @@
     header-block
 
     .content
-        .banner ShamUI
+        .banner Vueberry
 
         .title Vue Component Library
 
@@ -73,19 +73,18 @@ import codeNpm from '@/pages/code';
         font-size: 18px
         font-weight: 500
         border-radius: 8px
-        background: $color-blue-1
-        color: $color-white-1
-        border: none
+        background: transparent
+        color: $color-dark-1
+        border: 1px solid $color-dark-1
         &:hover
-            box-shadow: 2px 2px 4px rgb($color-blue-1, 0.5)
+            box-shadow: 2px 2px 4px rgb($color-dark-1, 0.5)
         &:active
-            background: rgb($color-blue-1, 0.9)
+            background: rgb($color-dark-1, 0.05)
 
 .button-git:deep(.button)
     background: $color-dark-1
+    color: $color-white-1
     margin-left: 30px
-    &:hover
-        box-shadow: 2px 2px 4px rgb($color-dark-1, 0.5)
     &:active
         background: rgb($color-dark-1, 0.9)
 
