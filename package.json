@@ -1,12 +1,12 @@
 {
-    "name": "sham-ui-vue",
+    "name": "vueberry",
     "version": "0.0.2",
-    "main": "./dist/sham-ui.umd.js",
-    "module": "./dist/sham-ui.es.js",
+    "main": "./dist/vueberry.umd.js",
+    "module": "./dist/vueberry.es.js",
     "exports": {
         ".": {
-            "import": "./dist/sham-ui.es.js",
-            "require": "./dist/sham-ui.umd.js"
+            "import": "./dist/vueberry.es.js",
+            "require": "./dist/vueberry.umd.js"
         },
         "./dist/style.css": "./dist/style.css"
     },
