@@ -1,12 +1,12 @@
-.sh-button
+.vb-button
     display: flex
     flex-direction: row
     align-items: center
     justify-content: center
     position: relative
     padding: 12px 20px
-    background: $sh-color-blue-1
-    color: $sh-color-white-1
+    background: $vb-color-blue-1
+    color: $vb-color-white-1
     border: none
     border-radius: 8px
     font-weight: 600
@@ -17,7 +17,7 @@
     &:active
         opacity: 0.9
 
-    .loader
+    .vb-loader
         display: flex
         flex-direction: row
         align-items: center
@@ -28,7 +28,7 @@
         &-circle
             width: 18px
             height: 18px
-            border: 2.5px solid $sh-color-white-1
+            border: 2.5px solid $vb-color-white-1
             border-bottom-color: transparent
             border-radius: 50%
             box-sizing: border-box
@@ -66,20 +66,20 @@
             font-size: 18px
 
     @mixin getType($primary, $secondary)
-        &:is(.sh-button_variant-default)
+        &:is(.vb-button_variant-default)
             background: $primary
             color: $secondary
             .loader-circle
                 border-color: $secondary
                 border-bottom-color: transparent
-        &:is(.sh-button_variant-outline)
+        &:is(.vb-button_variant-outline)
             background: transparent
             border: 1px solid $primary
             color: $primary
             .loader-circle
                 border-color: $primary
                 border-bottom-color: transparent
-        &:is(.sh-button_variant-text)
+        &:is(.vb-button_variant-text)
             background: transparent
             color: $primary
             .loader-circle
@@ -88,12 +88,12 @@
 
     &_type
         &-default
-            @include getType($sh-color-dark-1, $sh-color-white-1)
+            @include getType($vb-color-dark-1, $vb-color-white-1)
         &-primary
-            @include getType($sh-color-blue-1, $sh-color-white-1)
+            @include getType($vb-color-blue-1, $vb-color-white-1)
         &-light
-            @include getType($sh-color-gray-4, $sh-color-dark-1)
+            @include getType($vb-color-gray-4, $vb-color-dark-1)
         &-danger
-            @include getType($sh-color-red-1, $sh-color-white-1)
+            @include getType($vb-color-red-1, $vb-color-white-1)
         &-success
-            @include getType($sh-color-green-1, $sh-color-white-1)
+            @include getType($vb-color-green-1, $vb-color-white-1)

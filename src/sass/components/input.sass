@@ -1,30 +1,29 @@
-.sh-input
+.vb-input
     display: flex
     flex-direction: row
     align-items: center
-    border: 1px solid $sh-color-gray-3
+    border: 1px solid $vb-color-gray-3
     border-radius: 8px
     padding: 0 12px
     height: 40px
     cursor: text
-    background: $sh-color-gray-5
+    background: $vb-color-gray-5
     &:hover,
     &_focused
-        border-color: $sh-color-gray-2
-
-    .field
-        width: 100%
-        font-weight: 500
-        font-size: 14px
-        color: $sh-color-dark-1
-        outline: none
-        border: none
-        background: transparent
-        caret-color: $sh-color-blue-1
-        &::placeholder
-            font-size: 14px
-            color: $sh-color-gray-2
-
+        border-color: $vb-color-gray-2
     &_disabled
         pointer-events: none
         opacity: 0.8
+
+    .vb-field
+        width: 100%
+        font-weight: 500
+        font-size: 14px
+        color: $vb-color-dark-1
+        outline: none
+        border: none
+        background: transparent
+        caret-color: $vb-color-blue-1
+        &::placeholder
+            font-size: 14px
+            color: $vb-color-gray-2

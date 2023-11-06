@@ -1,103 +1,103 @@
-.sh-datepicker
+.vb-datepicker
     position: relative
 
-    .label
+    .vb-label
         margin-left: 5px
         font-weight: 500
         font-size: 12px
-        color: $sh-color-gray-2
+        color: $vb-color-gray-2
         margin-left: 5px
         margin-bottom: 5px
 
-    .icon-calendar
+    .vb-icon-calendar
         min-width: 20px
         max-width: 20px
         height: 20px
         margin-right: 5px
-        background-image: sh-icon-calendar($sh-color-gray-2)
+        background-image: vb-icon-calendar($vb-color-gray-2)
 
-    .icon-clear
+    .vb-icon-clear
         width: 20px
         height: 20px
         cursor: pointer
-        background-image: sh-icon-clear($sh-color-gray-2)
+        background-image: vb-icon-clear($vb-color-gray-2)
 
-    .message
+    .vb-message
         position: absolute
         margin-top: 5px
         margin-left: 5px
-        color: $sh-color-gray-2
+        color: $vb-color-gray-2
         font-size: 12px
 
-    .calendar
+    .vb-calendar
         position: absolute
         padding: 15px
-        background: $sh-color-gray-4
+        background: $vb-color-gray-4
         border-radius: 4px
         margin-top: 10px
-        color: $sh-color-dark-1
+        color: $vb-color-dark-1
 
-    .calendar-heaeder
+    .vb-calendar-heaeder
         display: flex
         flex-direction: row
         align-items: center
         justify-content: space-between
 
-    .prev, .next
+    .vb-prev, .vb-next
         min-width: 35px
         max-width: 35px
         height: 35px
         transform: rotate(90deg)
-        border: 1px solid $sh-color-gray-2
+        border: 1px solid $vb-color-gray-2
         border-radius: 8px
         cursor: pointer
-        background-image: sh-icon-chevron($sh-color-gray-2)
+        background-image: vb-icon-chevron($vb-color-gray-2)
         &:hover
-            border-color: $sh-color-gray-1
+            border-color: $vb-color-gray-1
 
-    .next
+    .vb-next
         transform: rotate(270deg)
 
-    .calendar-select
+    .vb-calendar-select
         padding: 0 5px
         margin: 0 5px
         height: 35px
         border-radius: 8px
-        border-color: $sh-color-gray-2
+        border-color: $vb-color-gray-2
         cursor: pointer
         background: transparent
         &:hover
-            border-color: $sh-color-gray-1
+            border-color: $vb-color-gray-1
 
-    .calendar-body
+    .vb-calendar-body
         margin-top: 15px
 
-    .week
+    .vb-week
         display: flex
         flex-direction: row
         align-items: center
         padding-bottom: 10px
-        border-bottom: 2px solid $sh-color-gray-3
+        border-bottom: 2px solid $vb-color-gray-3
 
-    .week-day
-        color: $sh-color-blue-1
+    .vb-week-day
+        color: $vb-color-blue-1
         width: 35px
 
-    .day-list
+    .vb-day-list
         margin-top: 10px
 
-    .day-row
+    .vb-day-row
         display: flex
         flex-direction: row
         align-items: center
         margin-top: 10px
 
-    .day
+    .vb-day
         display: flex
         flex-direction: row
         align-items: center
         justify-content: center
-        color: $sh-color-dark-1
+        color: $vb-color-dark-1
         width: 30px
         height: 30px
         margin-right: 5px
@@ -105,16 +105,16 @@
         line-height: 1px
         cursor: pointer
         &:hover
-            background: $sh-color-gray-3
+            background: $vb-color-gray-3
         &-active
-            background: $sh-color-gray-3
+            background: $vb-color-gray-3
 
-    .error
-        border-color: $sh-color-red-1
+    .vb-error
+        border-color: $vb-color-red-1
         &:hover
-            border-color: $sh-color-red-1
+            border-color: $vb-color-red-1
 
-.sh-datepicker:has(.error)
-    .label,
-    .message
-        color: $sh-color-red-1
+.vb-datepicker:has(.vb-error)
+    .vb-label,
+    .vb-message
+        color: $vb-color-red-1

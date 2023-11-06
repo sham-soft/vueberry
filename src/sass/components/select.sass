@@ -1,44 +1,43 @@
-
-.sh-select
+.vb-select
     position: relative
-    &:deep(.input),
-    &:deep(.field)
+    &:deep(.vb-input),
+    &:deep(.vb-field)
         cursor: pointer
 
-    .label
+    .vb-label
         margin-left: 5px
         font-weight: 500
         font-size: 12px
-        color: $sh-color-gray-2
+        color: $vb-color-gray-2
         margin-left: 5px
         margin-bottom: 5px
 
-    .icon-clear
+    .vb-icon-clear
         width: 20px
         height: 20px
         cursor: pointer
-        background-image: sh-icon-clear($sh-color-gray-2)
+        background-image: vb-icon-clear($vb-color-gray-2)
 
-    .icon-chevron
+    .vb-icon-chevron
         min-width: 25px
         max-width: 25px
         height: 25px
-        background-image: sh-icon-chevron($sh-color-gray-2)
+        background-image: vb-icon-chevron($vb-color-gray-2)
         &-invert
             transform: rotate(180deg)
 
-    .list
+    .vb-list
         position: absolute
         width: 100%
         min-height: 50px
         max-height: 200px
-        background-color: $sh-color-white-1
+        background-color: $vb-color-white-1
         border-radius: 4px
-        box-shadow: 0 3px 19px $sh-color-gray-3
+        box-shadow: 0 3px 19px $vb-color-gray-3
         overflow-y: auto
         z-index: 1
 
-    .item
+    .vb-item
         display: flex
         flex-direction: row
         align-items: center
@@ -46,77 +45,77 @@
         padding: 9px 0 9px 15px
         min-height: 35px
         font-size: 14px
-        color: $sh-color-dark-1
+        color: $vb-color-dark-1
         &:hover
-            background: $sh-color-gray-4
+            background: $vb-color-gray-4
 
-    .message
+    .vb-message
         position: absolute
         margin-top: 5px
         margin-left: 5px
-        color: $sh-color-gray-2
+        color: $vb-color-gray-2
         font-size: 12px
 
-    .focus
-        border-color: $sh-color-gray-2
+    .vb-focus
+        border-color: $vb-color-gray-2
 
-    .size
+    .vb-size
         &-small
             height: 32px
             padding: 0 10px
-            &:deep(.field)
+            &:deep(.vb-field)
                 font-size: 12px
                 &::placeholder
                     font-size: 12px
         &-medium
             height: 40px
             padding: 0 12px
-            &:deep(.field)
+            &:deep(.vb-field)
                 font-size: 14px
                 &::placeholder
                     font-size: 14px
         &-large
             height: 48px
             padding: 0 14px
-            &:deep(.field)
+            &:deep(.vb-field)
                 font-size: 16px
                 &::placeholder
                     font-size: 16px
 
-    .variant
+    .vb-variant
         &-outline
             background: transparent
         &-underline
             border: none
             border-radius: 0
-            border-bottom: 1px solid $sh-color-gray-3
+            border-bottom: 1px solid $vb-color-gray-3
             background: transparent
             padding: 0
 
-    .error
-        border-color: $sh-color-red-1
+    .vb-error
+        border-color: $vb-color-red-1
         &:hover,
         &_focused
-            border-color: $sh-color-red-1
+            border-color: $vb-color-red-1
 
-.sh-select
-    &:has(.size-small)
-        .label,
-        .message
+.vb-select
+    &:has(.vb-size-small)
+        .vb-label,
+        .vb-message
             font-size: 10px
-    &:has(.size-large)
-        .label,
-        .message
+    &:has(.vb-size-large)
+        .vb-label,
+        .vb-message
             font-size: 14px
 
-.sh-select:has(.variant-underline)
-    .label
+.vb-select:has(.vb-variant-underline)
+    .vb-label
         margin-left: 0
         margin-bottom: 0
-    .message
+    .vb-message
         margin-left: 0
 
-.sh-select:has(.error)
-    .label,
-    .message
-        color: $sh-color-red-1
+.vb-select:has(.vb-error)
+    .vb-label,
+    .vb-message
+        color: $vb-color-red-1

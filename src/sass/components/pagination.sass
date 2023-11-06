@@ -1,33 +1,33 @@
-.sh-pagination
+.vb-pagination
     display: flex
     flex-direction: row
     align-items: center
     justify-content: center
     font-size: 20px
     font-weight: 500
-    color: $sh-color-dark-1
+    color: $vb-color-dark-1
 
-    .prev, .next
+    .vb-prev, .vb-next
         min-width: 35px
         max-width: 35px
         height: 35px
         transform: rotate(90deg)
-        border: 1px solid $sh-color-dark-2
+        border: 1px solid $vb-color-dark-2
         border-radius: 8px
         cursor: pointer
-        background-image: sh-icon-chevron($sh-color-dark-2)
+        background-image: vb-icon-chevron($vb-color-dark-2)
         &:hover
-            border-color: $sh-color-gray-1
-            background-image: sh-icon-chevron($sh-color-gray-1)
+            border-color: $vb-color-gray-1
+            background-image: vb-icon-chevron($vb-color-gray-1)
 
-    .prev
+    .vb-prev
         margin-right: 10px
 
-    .next
+    .vb-next
         transform: rotate(270deg)
         margin-left: 10px
 
-    .step
+    .vb-step
         display: flex
         flex-direction: row
         align-items: center
@@ -38,14 +38,14 @@
         cursor: pointer
         border-radius: 50%
         &:hover
-            background: $sh-color-gray-4
+            background: $vb-color-gray-4
         &-active
-            background: $sh-color-gray-3
+            background: $vb-color-gray-3
         &-ellipsis
             margin: 0 20px
 
-    .disabled
+    .vb-disabled
         pointer-events: none
         opacity: 0.8
-        border-color: $sh-color-gray-2
-        background-image: sh-icon-chevron($sh-color-gray-2)
+        border-color: $vb-color-gray-2
+        background-image: vb-icon-chevron($vb-color-gray-2)

@@ -1,4 +1,4 @@
-.sh-tooltip-wrap
+.vb-tooltip-wrap
     display: flex
     flex-direction: row
     align-items: center
@@ -10,25 +10,25 @@
     width: 100%
     height: 100%
     &:hover
-        .tooltip:not(.hide)
+        .vb-tooltip:not(.vb-hide)
             display: flex
             animation: slowlyAppear 0.3s ease-in-out
 
-    .tooltip
+    .vb-tooltip
         display: flex
         flex-direction: row
         align-items: center
         justify-content: center
         position: absolute
-        background: rgb($sh-color-gray-1, 0.9)
+        background: rgb($vb-color-gray-1, 0.9)
         padding: 10px 20px
-        color: $sh-color-white-1
+        color: $vb-color-white-1
         border-radius: 4px
         font-weight: 500
         display: none
         width: max-content
 
-    .show
+    .vb-show
         display: flex
         animation: slowlyAppear 0.3s ease-in-out
 
@@ -45,7 +45,7 @@
 
     $position-margin: calc(100% + 10px)
 
-    .position
+    .vb-position
         &-top
             bottom: $position-margin
         &-right
