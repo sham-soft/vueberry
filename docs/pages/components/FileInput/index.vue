@@ -3,7 +3,7 @@ page-wrap
     template(v-slot:title) FileInput
 
     template(v-slot:text)
-        | Компонент <b>sh-file-input</b> - это специализированный инструмент ввода,
+        | Компонент <b>vb-file-input</b> - это специализированный инструмент ввода,
         | который обеспечивает понятный интерфейс для выбора файлов.
 
     template(v-slot:playground)
@@ -14,7 +14,7 @@ page-wrap
             :gitLink="gitLink"
             @change="setValue(data, $event)"
         )
-            sh-file-input.sh-file-input(
+            vb-file-input.vb-file-input(
                 v-model="modelValue"
                 :placeholder="data.placeholder"
                 :isMultiple="data.multiple"
@@ -76,7 +76,7 @@ const data: TypeData = reactive({
 </script>
 
 <style scoped lang="sass">
-.sh-file-input
+.vb-file-input
     width: 220px
 
 </style>

@@ -55,8 +55,8 @@ const emit = defineEmits<{
 
 const inputClasses = computed<object>(() => {
     return {
-        'vb-input_focused': isFocus.value,
-        'vb-input_disabled': props.isDisabled,
+        'vb-focused': isFocus.value,
+        'vb-disabled': props.isDisabled,
     };
 });
 

@@ -3,7 +3,7 @@ page-wrap
     template(v-slot:title) TextField
 
     template(v-slot:text)
-        | Компонент <b>sh-text-field</b> используются для сбора предоставленной
+        | Компонент <b>vb-text-field</b> используются для сбора предоставленной
         | пользователем информации.
 
     template(v-slot:playground)
@@ -14,7 +14,7 @@ page-wrap
             :gitLink="gitLink"
             @change="setValue(data, $event)"
         )
-            sh-text-field.sh-text-field(
+            vb-text-field.vb-text-field(
                 v-model="data.modelValue"
                 :placeholder="data.placeholder"
                 :isReadonly="data.readonly"
@@ -88,7 +88,7 @@ const data: TypeData = reactive({
 </script>
 
 <style scoped lang="sass">
-.sh-text-field
+.vb-text-field
     width: 200px
 
 </style>

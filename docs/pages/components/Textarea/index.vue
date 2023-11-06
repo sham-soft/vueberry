@@ -2,8 +2,7 @@
 page-wrap
     template(v-slot:title) Textarea
 
-    template(v-slot:text)
-        | Компонент <b>sh-textarea</b> используются для сбора больших объемов текстовых данных.
+    template(v-slot:text) Компонент <b>vb-textarea</b> используются для сбора больших объемов текстовых данных.
 
     template(v-slot:playground)
         v-playground(
@@ -13,7 +12,7 @@ page-wrap
             :gitLink="gitLink"
             @change="setValue(data, $event)"
         )
-            sh-textarea.sh-textarea(
+            vb-textarea.vb-textarea(
                 v-model="data.modelValue"
                 :placeholder="data.placeholder"
                 :isReadonly="data.readonly"
@@ -73,7 +72,7 @@ const data: TypeData = reactive({
 </script>
 
 <style scoped lang="sass">
-.sh-textarea
+.vb-textarea
     max-width: 250px
 
 </style>

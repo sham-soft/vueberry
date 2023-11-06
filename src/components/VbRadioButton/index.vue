@@ -4,7 +4,7 @@
         slot {{ label }}
 
     .vb-button-group(:class="componentClasses")
-        .vb-button(
+        .vb-radio-button(
             v-for="item in radioList"
             :key="keyField + item.id"
         )

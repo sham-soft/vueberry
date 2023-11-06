@@ -2,7 +2,7 @@
 page-wrap
     template(v-slot:title) Breadcrumbs
 
-    template(v-slot:text) Компонент <b>sh-breadcrumbs</b> является компонентом навигации.
+    template(v-slot:text) Компонент <b>vb-breadcrumbs</b> является компонентом навигации.
 
     template(v-slot:playground)
         v-playground(
@@ -12,7 +12,7 @@ page-wrap
             :gitLink="gitLink"
             @change="setValue(data, $event)"
         )
-            sh-breadcrumbs(
+            vb-breadcrumbs(
                 :size="data.size"
                 :items="options"
             )
@@ -36,7 +36,7 @@ import apiJSON from '@/pages/components/Breadcrumbs/api.json';
 import optionsJSON from '@/pages/components/Breadcrumbs/options.json';
 import parametersJSON from '@/pages/components/Breadcrumbs/parameters.json';
 import { useParameter } from '@/composables/playground';
-import type { TypeCrumb } from '../../../../src/components/ShBreadcrumbs/types';
+import type { TypeCrumb } from '../../../../src/components/VbBreadcrumbs/types';
 import type { TypeApiTable } from '@/components/common/VApiTable/types';
 import type { TypeParameter } from '@/components/common/VPlayground/types';
 

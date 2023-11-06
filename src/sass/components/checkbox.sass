@@ -42,23 +42,23 @@
         background-image: vb-icon-mark($vb-color-blue-1)
         background-size: 130%
 
-    &_disabled
-        pointer-events: none
-        opacity: 0.8
-        cursor: default
+.vb-checkbox.vb-disabled
+    pointer-events: none
+    opacity: 0.8
+    cursor: default
 
-    &_size
-        &-small
-            .vb-label::before
-                width: 12px
-                height: 12px
-            .vb-name
-                font-size: 12px
-                margin-left: 6px
-        &-large
-            .vb-label::before
-                width: 17px
-                height: 17px
-            .vb-name
-                font-size: 16px
-                margin-left: 10px
+.vb-checkbox.vb-size
+    &-small
+        .vb-label::before
+            width: 12px
+            height: 12px
+        .vb-name
+            font-size: 12px
+            margin-left: 6px
+    &-large
+        .vb-label::before
+            width: 17px
+            height: 17px
+        .vb-name
+            font-size: 16px
+            margin-left: 10px

@@ -39,61 +39,61 @@
                 100%
                     transform: rotate(360deg)
 
-    &_loading
-        pointer-events: none
-        opacity: 0.9
-        .text
-            opacity: 0
+.vb-button.vb-loading
+    pointer-events: none
+    opacity: 0.9
+    .vb-text
+        opacity: 0
 
-    &_disabled
-        opacity: 0.8
-        cursor: not-allowed
-        &.button
-            &:hover
-                filter: brightness(100%)
-            &:active
-                opacity: 0.8
+.vb-button.vb-disabled
+    opacity: 0.8
+    cursor: not-allowed
+    &.vb-button
+        &:hover
+            filter: brightness(100%)
+        &:active
+            opacity: 0.8
 
-    &_size
-        &-small
-            height: 32px
-            font-size: 14px
-        &-medium
-            height: 40px
-            font-size: 16px
-        &-large
-            height: 48px
-            font-size: 18px
+.vb-button.vb-size
+    &-small
+        height: 32px
+        font-size: 14px
+    &-medium
+        height: 40px
+        font-size: 16px
+    &-large
+        height: 48px
+        font-size: 18px
 
-    @mixin getType($primary, $secondary)
-        &:is(.vb-button_variant-default)
-            background: $primary
-            color: $secondary
-            .loader-circle
-                border-color: $secondary
-                border-bottom-color: transparent
-        &:is(.vb-button_variant-outline)
-            background: transparent
-            border: 1px solid $primary
-            color: $primary
-            .loader-circle
-                border-color: $primary
-                border-bottom-color: transparent
-        &:is(.vb-button_variant-text)
-            background: transparent
-            color: $primary
-            .loader-circle
-                border-color: $primary
-                border-bottom-color: transparent
+@mixin getType($primary, $secondary)
+    &:is(.vb-variant-default)
+        background: $primary
+        color: $secondary
+        .vb-loader-circle
+            border-color: $secondary
+            border-bottom-color: transparent
+    &:is(.vb-variant-outline)
+        background: transparent
+        border: 1px solid $primary
+        color: $primary
+        .vb-loader-circle
+            border-color: $primary
+            border-bottom-color: transparent
+    &:is(.vb-variant-text)
+        background: transparent
+        color: $primary
+        .vb-loader-circle
+            border-color: $primary
+            border-bottom-color: transparent
 
-    &_type
-        &-default
-            @include getType($vb-color-dark-1, $vb-color-white-1)
-        &-primary
-            @include getType($vb-color-blue-1, $vb-color-white-1)
-        &-light
-            @include getType($vb-color-gray-4, $vb-color-dark-1)
-        &-danger
-            @include getType($vb-color-red-1, $vb-color-white-1)
-        &-success
-            @include getType($vb-color-green-1, $vb-color-white-1)
+.vb-button.vb-type
+    &-default
+        @include getType($vb-color-dark-1, $vb-color-white-1)
+    &-primary
+        @include getType($vb-color-blue-1, $vb-color-white-1)
+    &-light
+        @include getType($vb-color-gray-4, $vb-color-dark-1)
+    &-danger
+        @include getType($vb-color-red-1, $vb-color-white-1)
+    &-success
+        @include getType($vb-color-green-1, $vb-color-white-1)

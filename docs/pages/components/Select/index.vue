@@ -3,7 +3,7 @@ page-wrap
     template(v-slot:title) Select
 
     template(v-slot:text)
-        | Компонент <b>sh-select</b> используются для сбора предоставленной
+        | Компонент <b>vb-select</b> используются для сбора предоставленной
         | пользователем информации из списка опций.
 
     template(v-slot:playground)
@@ -14,7 +14,7 @@ page-wrap
             :gitLink="gitLink"
             @change="setParameterDecorator"
         )
-            sh-select.sh-select(
+            vb-select.vb-select(
                 v-model="data.modelValue"
                 :placeholder="data.placeholder"
                 :isDisabled="data.disabled"
@@ -46,7 +46,7 @@ import apiJSON from '@/pages/components/Select/api.json';
 import optionsJSON from '@/pages/components/Select/options.json';
 import parametersJSON from '@/pages/components/Select/parameters.json';
 import { useParameter } from '@/composables/playground';
-import type { TypeOption } from '../../../../src/components/ShSelect/types';
+import type { TypeOption } from '../../../../src/components/VbSelect/types';
 import type { TypeApiTable } from '@/components/common/VApiTable/types';
 import type { TypeParameter, TypeData } from '@/components/common/VPlayground/types';
 
@@ -98,7 +98,7 @@ function setParameterDecorator(event: TypeData): void {
 </script>
 
 <style scoped lang="sass">
-.sh-select
+.vb-select
     padding-top: 80px
     padding-bottom: 130px
     width: 230px

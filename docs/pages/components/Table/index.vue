@@ -3,7 +3,7 @@ page-wrap
     template(v-slot:title) Table
 
     template(v-slot:text)
-        | Компонент <b>sh-table</b> представляет строки и столбцы
+        | Компонент <b>vb-table</b> представляет строки и столбцы
         | предназначенные для структурирования данных.
 
     template(v-slot:playground)
@@ -15,7 +15,7 @@ page-wrap
             @change="setValue(data, $event)"
         )
             .table
-                sh-table(
+                vb-table(
                     :headers="headers"
                     :items="items"
                     :height="data.height"

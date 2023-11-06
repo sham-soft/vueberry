@@ -3,7 +3,7 @@ page-wrap
     template(v-slot:title) Button
 
     template(v-slot:text)
-        | Компонент <b>sh-button-origin</b> заменяет стандартную
+        | Компонент <b>vb-button-origin</b> заменяет стандартную
         | html-кнопку и добавляет множество опций.
         | Вы так же можете кастомизировать кнопку добавив компонент-обертку
         | с необходимым функционалом.
@@ -16,7 +16,7 @@ page-wrap
             :gitLink="gitLink"
             @change="setValue(data, $event)"
         )
-            sh-button(
+            vb-button(
                 :variant="data.variant"
                 :type="data.type"
                 :size="data.size"

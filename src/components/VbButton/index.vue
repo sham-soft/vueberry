@@ -37,12 +37,12 @@ const emits = defineEmits<{
 
 const componentClasses = computed<(string | object)[]>(() => {
     return [
-        'vb-button_size-' + props.size,
-        'vb-button_variant-' + props.variant,
-        'vb-button_type-' + props.type,
+        'vb-size-' + props.size,
+        'vb-variant-' + props.variant,
+        'vb-type-' + props.type,
         {
-            'vb-button_loading': props.isLoading,
-            'vb-button_disabled': props.isDisabled,
+            'vb-loading': props.isLoading,
+            'vb-disabled': props.isDisabled,
         },
     ];
 });

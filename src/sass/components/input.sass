@@ -8,12 +8,8 @@
     height: 40px
     cursor: text
     background: $vb-color-gray-5
-    &:hover,
-    &_focused
+    &:hover
         border-color: $vb-color-gray-2
-    &_disabled
-        pointer-events: none
-        opacity: 0.8
 
     .vb-field
         width: 100%
@@ -27,3 +23,10 @@
         &::placeholder
             font-size: 14px
             color: $vb-color-gray-2
+
+.vb-input.vb-focused
+    border-color: $vb-color-gray-2
+
+.vb-input.vb-disabled
+    pointer-events: none
+    opacity: 0.8

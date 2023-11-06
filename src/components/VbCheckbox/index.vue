@@ -42,9 +42,9 @@ const emits = defineEmits<{
 
 const componentClasses = computed<(string | object)[]>(() => {
     return [
-        'vb-checkbox_size-' + props.size,
+        'vb-size-' + props.size,
         {
-            'vb-checkbox_disabled': props.isDisabled,
+            'vb-disabled': props.isDisabled,
         },
     ];
 });

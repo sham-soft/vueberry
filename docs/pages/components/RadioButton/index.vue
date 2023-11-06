@@ -3,7 +3,7 @@ page-wrap
     template(v-slot:title) RadioButton
 
     template(v-slot:text)
-        | Компонент <b>sh-radio-button</b> представляет собой простой переключатель.
+        | Компонент <b>vb-radio-button</b> представляет собой простой переключатель.
         | Пользователь может выбрать один вариант из предоставляемых опций.
 
     template(v-slot:playground)
@@ -14,7 +14,7 @@ page-wrap
             :gitLink="gitLink"
             @change="setValue(data, $event)"
         )
-            sh-radio-button(
+            vb-radio-button(
                 v-model="data.modelValue"
                 keyField="radio-button"
                 :radioList="options"

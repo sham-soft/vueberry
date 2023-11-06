@@ -35,7 +35,7 @@ const emits = defineEmits<{
 
 const componentClasses = computed<object>(() => {
     return {
-        'vb-tabs_column': props.isColumn,
+        'vb-column': props.isColumn,
     };
 });
 

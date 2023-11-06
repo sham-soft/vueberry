@@ -3,7 +3,7 @@ page-wrap
     template(v-slot:title) Tabs
 
     template(v-slot:text)
-        | Компонент <b>sh-tabs</b> может быть использован
+        | Компонент <b>vb-tabs</b> может быть использован
         | в качестве псевдонавигации для страницы, где вкладки
         | являются ссылками, а элементы вкладок - содержимым.
 
@@ -15,7 +15,7 @@ page-wrap
             :gitLink="gitLink"
             @change="setValue(data, $event)"
         )
-            sh-tabs(
+            vb-tabs(
                 v-model="data.modelValue"
                 :tabs="tabs"
                 :isColumn="data.column"

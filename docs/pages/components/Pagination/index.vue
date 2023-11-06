@@ -3,7 +3,7 @@ page-wrap
     template(v-slot:title) Pagination
 
     template(v-slot:text)
-        | Компонент <b>sh-pagination</b> используется для разделения длинных наборов данных,
+        | Компонент <b>vb-pagination</b> используется для разделения длинных наборов данных,
         | чтобы пользователю было проще использовать информацию.
 
     template(v-slot:playground)
@@ -14,7 +14,7 @@ page-wrap
             :gitLink="gitLink"
             @change="setValue(data, $event)"
         )
-            sh-pagination(
+            vb-pagination(
                 v-model="data.modelValue"
                 :stepsLength="data.stepsLength"
             )

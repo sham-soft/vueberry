@@ -3,7 +3,7 @@ page-wrap
     template(v-slot:title) Checkbox
 
     template(v-slot:text)
-        | Компонент <b>sh-checkbox</b> представляет флаг для выбора опции.
+        | Компонент <b>vb-checkbox</b> представляет флаг для выбора опции.
 
     template(v-slot:playground)
         v-playground(
@@ -13,7 +13,7 @@ page-wrap
             :gitLink="gitLink"
             @change="setValue(data, $event)"
         )
-            sh-checkbox(
+            vb-checkbox(
                 v-model="data.modelValue"
                 keyField="checkbox"
                 :isDisabled="data.disabled"

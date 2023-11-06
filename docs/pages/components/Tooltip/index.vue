@@ -3,7 +3,7 @@ page-wrap
     template(v-slot:title) Tooltip
 
     template(v-slot:text)
-        | Компонент <b>sh-tooltip</b> полезен для передачи информации,
+        | Компонент <b>vb-tooltip</b> полезен для передачи информации,
         | когда пользователь наводит курсор мыши на элемент.
 
     template(v-slot:playground)
@@ -15,7 +15,7 @@ page-wrap
             @change="setValue(data, $event)"
         )
             .element
-                sh-tooltip(
+                vb-tooltip(
                     :isShow="data.show || undefined"
                     :position="data.position"
                 ) {{ data.text || 'Tooltip' }}

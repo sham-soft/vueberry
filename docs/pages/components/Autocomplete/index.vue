@@ -3,7 +3,7 @@ page-wrap
     template(v-slot:title) Autocomplete
 
     template(v-slot:text)
-        | Компонент <b>sh-autocomplete</b> представляет функциональность
+        | Компонент <b>vb-autocomplete</b> представляет функциональность
         | предопределённого варианта выбора для пользователя.
         | Пользователь может выбрать опцию из списка вместо того, чтобы вводить её вручную.
 
@@ -15,7 +15,7 @@ page-wrap
             :gitLink="gitLink"
             @change="setValue(data, $event)"
         )
-            sh-autocomplete.sh-autocomplete(
+            vb-autocomplete.vb-autocomplete(
                 v-model="data.modelValue"
                 :placeholder="data.placeholder"
                 :isDisabled="data.disabled"
@@ -86,7 +86,7 @@ const data: TypeData = reactive({
 </script>
 
 <style scoped lang="sass">
-.sh-autocomplete
+.vb-autocomplete
     padding-top: 80px
     padding-bottom: 160px
     width: 230px

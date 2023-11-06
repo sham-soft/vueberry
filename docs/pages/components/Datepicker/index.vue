@@ -3,7 +3,7 @@ page-wrap
     template(v-slot:title) Datepicker
 
     template(v-slot:text)
-        | Компонент <b>sh-datepicker</b> является полем ввода даты.
+        | Компонент <b>vb-datepicker</b> является полем ввода даты.
         | Значение даты можно ввести вручную, либо выбрать из выпадающего списка.
 
     template(v-slot:playground)
@@ -14,7 +14,7 @@ page-wrap
             :gitLink="gitLink"
             @change="setValue(data, $event)"
         )
-            sh-datepicker.sh-datepicker(
+            vb-datepicker.vb-datepicker(
                 v-model="data.modelValue"
                 :placeholder="data.placeholder"
                 :isReadonly="data.readonly"
@@ -73,7 +73,7 @@ const data: TypeData = reactive({
 </script>
 
 <style scoped lang="sass">
-.sh-datepicker
+.vb-datepicker
     width: 180px
     padding-top: 80px
     padding-bottom: 350px

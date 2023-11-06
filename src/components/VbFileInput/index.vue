@@ -88,8 +88,8 @@ const nameList = computed<string>(() => {
 
 const inputClasses = computed<object>(() => {
     return {
-        'vb-file-input_disabled': props.isDisabled,
-        'vb-file-input_error': props.isError,
+        'vb-disabled': props.isDisabled,
+        'vb-error': props.isError,
     };
 });
 

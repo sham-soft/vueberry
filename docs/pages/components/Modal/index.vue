@@ -3,7 +3,7 @@ page-wrap
     template(v-slot:title) Modal
 
     template(v-slot:text)
-        | Компонент <b>sh-modal</b> - это всплывающее окно с информацией для пользователя.
+        | Компонент <b>vb-modal</b> - это всплывающее окно с информацией для пользователя.
         | При появлении модального окна, вся работа блокируется до закрытия компонента.
 
     template(v-slot:playground)
@@ -14,7 +14,7 @@ page-wrap
             :gitLink="gitLink"
             @change="setValue(data, $event)"
         )
-            sh-modal(
+            vb-modal(
                 v-if="data.modelValue"
                 :title="data.title"
                 :text="data.text"

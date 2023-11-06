@@ -34,7 +34,7 @@ const props = withDefaults(
 
 const componentClasses = computed<string[]>(() => {
     return [
-        'size-' + props.size,
+        'vb-size-' + props.size,
     ];
 });
 

@@ -69,14 +69,14 @@
         color: $vb-color-gray-2
         font-size: 12px
 
-    &_disabled
-        pointer-events: none
-        opacity: 0.8
+.vb-file-input.vb-disabled
+    pointer-events: none
+    opacity: 0.8
 
-    &_error
-        .vb-field
+.vb-file-input.vb-error
+    .vb-field
+        border-color: $vb-color-red-1
+        &:hover
             border-color: $vb-color-red-1
-            &:hover
-                border-color: $vb-color-red-1
-        .vb-label, .vb-message
-            color: $vb-color-red-1
+    .vb-label, .vb-message
+        color: $vb-color-red-1
