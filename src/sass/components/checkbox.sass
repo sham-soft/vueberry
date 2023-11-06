@@ -37,9 +37,7 @@
         background-color: $vb-color-gray-4
 
     .vb-input:checked + .vb-label::before
-        border-color: $vb-color-blue-1
         background-color: transparent
-        background-image: vb-icon-mark($vb-color-blue-1)
         background-size: 130%
 
 .vb-checkbox.vb-disabled
@@ -62,3 +60,20 @@
         .vb-name
             font-size: 16px
             margin-left: 10px
+
+@mixin getType($color)
+   .vb-input:checked + .vb-label::before
+        border-color: $color
+        background-image: vb-icon-mark($color)
+
+.vb-checkbox.vb-type
+    &-default
+        @include getType($vb-color-dark-1)
+    &-primary
+        @include getType($vb-color-blue-1)
+    &-light
+        @include getType($vb-color-gray-4)
+    &-danger
+        @include getType($vb-color-red-1)
+    &-success
+        @include getType($vb-color-green-1)

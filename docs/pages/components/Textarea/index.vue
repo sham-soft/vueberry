@@ -2,7 +2,7 @@
 page-wrap
     template(v-slot:title) Textarea
 
-    template(v-slot:text) Компонент <b>vb-textarea</b> используются для сбора больших объемов текстовых данных.
+    template(v-slot:text) Компонент <b>vb-textarea</b> используется для сбора больших объемов текстовых данных.
 
     template(v-slot:playground)
         v-playground(

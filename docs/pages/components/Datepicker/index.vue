@@ -3,7 +3,7 @@ page-wrap
     template(v-slot:title) Datepicker
 
     template(v-slot:text)
-        | Компонент <b>vb-datepicker</b> является полем ввода даты.
+        | Компонент <b>vb-datepicker</b> предоставляет поле ввода даты.
         | Значение даты можно ввести вручную, либо выбрать из выпадающего списка.
 
     template(v-slot:playground)
@@ -21,6 +21,7 @@ page-wrap
                 :isDisabled="data.disabled"
                 :isError="data.error"
                 :message="data.message"
+                :size="data.size"
             ) {{ data.label }}
 
     template(v-slot:apiTable)
@@ -58,6 +59,7 @@ type TypeData = {
     disabled: boolean,
     error: boolean,
     message: string,
+    size: string,
 }
 
 const data: TypeData = reactive({
@@ -68,6 +70,7 @@ const data: TypeData = reactive({
     disabled: false,
     error: false,
     message: '',
+    size: '',
 });
 
 </script>

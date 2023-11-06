@@ -3,7 +3,8 @@ page-wrap
     template(v-slot:title) Checkbox
 
     template(v-slot:text)
-        | Компонент <b>vb-checkbox</b> представляет флаг для выбора опции.
+        | Компонент флажка <b>vb-checkbox</b> позволяет пользователю выбрать один или несколько элементов из набора.
+        | Флажки можно использовать для включения или выключения опции.
 
     template(v-slot:playground)
         v-playground(
@@ -18,6 +19,7 @@ page-wrap
                 keyField="checkbox"
                 :isDisabled="data.disabled"
                 :size="data.size"
+                :type="data.type"
             ) {{ data.text }}
 
     template(v-slot:apiTable)
@@ -52,6 +54,7 @@ type TypeData = {
     text: string,
     disabled: boolean,
     size: string,
+    type: string,
 }
 
 const data: TypeData = reactive({
@@ -59,6 +62,7 @@ const data: TypeData = reactive({
     text: 'My Checkbox',
     disabled: false,
     size: 'medium',
+    type: 'primary',
 });
 
 </script>

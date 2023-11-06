@@ -10,5 +10,28 @@
         "elementType": "switch",
         "title": "COLUMN",
         "isInline": true
+    },
+    "size": { 
+        "id": "size",
+        "elementType": "radio",
+        "title": "SIZE",
+        "variantList": [
+            { "id": "small", "name": "Small" },
+            { "id": "medium", "name": "Medium" },
+            { "id": "large", "name": "Large" }
+        ]
+    },
+    "type": {
+        "id": "type",
+        "elementType": "radio",
+        "title": "TYPE",
+        "value": "primary",
+        "variantList": [
+            { "id": "default", "name": "Default" },
+            { "id": "primary", "name": "Primary" },
+            { "id": "light", "name": "Light" },
+            { "id": "danger", "name": "Danger" },
+            { "id": "success", "name": "Success" }
+        ]
     }
 }

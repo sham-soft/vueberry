@@ -27,12 +27,14 @@ const props = withDefaults(
         keyField: string,
         isDisabled?: boolean,
         size?: string,
+        type?: string,
     }>(),
     {
         modelValue: false,
         keyField: 'key-id',
         isDisabled: false,
         size: 'medium',
+        type: 'primary',
     },
 );
 
@@ -43,6 +45,7 @@ const emits = defineEmits<{
 const componentClasses = computed<(string | object)[]>(() => {
     return [
         'vb-size-' + props.size,
+        'vb-type-' + props.type,
         {
             'vb-disabled': props.isDisabled,
         },

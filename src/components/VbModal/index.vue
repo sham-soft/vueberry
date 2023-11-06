@@ -1,7 +1,7 @@
 <template lang="pug">
 teleport(to="#app")
     .vb-modal-wrap(@click.self="onClose")
-        .modal
+        .vb-modal
             .vb-header
                 .vb-title
                     slot(name="title") {{ title }}

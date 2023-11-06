@@ -95,6 +95,7 @@ const props = withDefaults(
         isReadonly?: boolean,
         isError?: boolean,
         message?: string,
+        size?: string,
     }>(),
     {
         modelValue: '',
@@ -104,6 +105,7 @@ const props = withDefaults(
         isReadonly: false,
         isError: false,
         message: '',
+        size: 'medium',
     },
 );
 
@@ -185,9 +187,12 @@ function setDay(day: number): void {
 }
 
 const componentClasses = computed<object>(() => {
-    return {
-        'vb-error': props.isError,
-    };
+    return [
+        'vb-size-' + props.size,
+        {
+            'vb-error': props.isError,
+        },
+    ];
 });
 
 // BLOCK "label"

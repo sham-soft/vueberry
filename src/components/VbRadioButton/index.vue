@@ -39,12 +39,16 @@ const props = withDefaults(
         radioList?: TypeRadio[],
         label?: string,
         isColumn?: boolean,
+        size?: string,
+        type?: string,
     }>(),
     {
         modelValue: '',
         radioList: () => [],
         label: '',
         isColumn: false,
+        size: 'medium',
+        type: 'primary',
     },
 );
 
@@ -53,9 +57,13 @@ const emits = defineEmits<{
 }>();
 
 const componentClasses = computed<object>(() => {
-    return {
-        'vb-group-column': props.isColumn,
-    };
+    return [
+        'vb-size-' + props.size,
+        'vb-type-' + props.type,
+        {
+            'vb-group-column': props.isColumn,
+        },
+    ];
 });
 
 function setRadio(value: number | string): void {

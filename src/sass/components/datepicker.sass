@@ -109,6 +109,29 @@
         &-active
             background: $vb-color-gray-3
 
+    .vb-size
+        &-small
+            height: 32px
+            padding: 0 10px
+            &:deep(.vb-field)
+                font-size: 12px
+                &::placeholder
+                    font-size: 12px
+        &-medium
+            height: 40px
+            padding: 0 12px
+            &:deep(.vb-field)
+                font-size: 14px
+                &::placeholder
+                    font-size: 14px
+        &-large
+            height: 48px
+            padding: 0 14px
+            &:deep(.vb-field)
+                font-size: 16px
+                &::placeholder
+                    font-size: 16px
+
     .vb-error
         border-color: $vb-color-red-1
         &:hover
@@ -118,3 +141,13 @@
     .vb-label,
     .vb-message
         color: $vb-color-red-1
+
+.vb-datepicker
+    &:has(.vb-size-small)
+        .vb-label,
+        .vb-message
+            font-size: 10px
+    &:has(.vb-size-large)
+        .vb-label,
+        .vb-message
+            font-size: 14px

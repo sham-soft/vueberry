@@ -19,6 +19,8 @@ page-wrap
                 keyField="radio-button"
                 :radioList="options"
                 :isColumn="data.column"
+                :size="data.size"
+                :type="data.type"
             ) {{ data.label }}
 
     template(v-slot:apiTable)
@@ -54,12 +56,16 @@ type TypeData = {
     modelValue: string | number,
     label: string,
     column: boolean,
+    size: string,
+    type: string,
 }
 
 const data: TypeData = reactive({
     modelValue: 1,
     label: '',
     column: false,
+    size: 'medium',
+    type: 'primary',
 });
 
 </script>

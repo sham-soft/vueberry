@@ -8,7 +8,8 @@
     "show": {
         "id": "show",
         "elementType": "switch",
-        "title": "SHOW ALWAYS"
+        "title": "SHOW ALWAYS",
+        "isInline": true
     },
     "position": { 
         "id": "position",

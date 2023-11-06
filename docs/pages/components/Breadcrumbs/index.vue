@@ -2,7 +2,10 @@
 page-wrap
     template(v-slot:title) Breadcrumbs
 
-    template(v-slot:text) Компонент <b>vb-breadcrumbs</b> является компонентом навигации.
+    template(v-slot:text)
+        | Компонент <b>vb-breadcrumbs</b> - это стандартное средство навигации,
+        | которое позволяет пользователям легко перемещаться между различными разделами
+        | пользовательского интерфейса или веб-сайта. 
 
     template(v-slot:playground)
         v-playground(

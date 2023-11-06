@@ -3,7 +3,7 @@ page-wrap
     template(v-slot:title) TextField
 
     template(v-slot:text)
-        | Компонент <b>vb-text-field</b> используются для сбора предоставленной
+        | Компонент <b>vb-text-field</b> используется для сбора предоставленной
         | пользователем информации.
 
     template(v-slot:playground)
