@@ -133,11 +133,6 @@ const router = createRouter({
                     name: 'SnippetNotification',
                     component: () => import('@/pages/snippets/Notification/index.vue'),
                 },
-                {
-                    path: 'validate',
-                    name: 'SnippetValidate',
-                    component: () => import('@/pages/snippets/Validate/index.vue'),
-                },
             ],
         },
     ],

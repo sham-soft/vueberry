@@ -64,7 +64,6 @@ const snippetLinks: TypeLink[] = [
     { id: 'files', name: 'Files', path: '/snippets/files' },
     { id: 'format', name: 'Formatters', path: '/snippets/formatters' },
     { id: 'notification', name: 'Notification', path: '/snippets/notification' },
-    { id: 'validate', name: 'Validate', path: '/snippets/validate' },
 ];
 
 const navList: TypeNav[] = [

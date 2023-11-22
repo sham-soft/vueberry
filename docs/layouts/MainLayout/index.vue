@@ -3,14 +3,25 @@
     header-block.header-block
     main.main-block
         sidebar-menu.sidebar-menu
-        .content
+        .content(ref="refContent")
             router-view
 
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
+import { onBeforeRouteUpdate, onBeforeRouteLeave } from 'vue-router';
 import HeaderBlock from '@/components/HeaderBlock/index.vue';
 import SidebarMenu from '@/components/SidebarMenu/index.vue';
+
+const refContent = ref<null | HTMLInputElement>(null);
+
+function scrollTo() {
+    refContent.value?.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+onBeforeRouteLeave(scrollTo);
+onBeforeRouteUpdate(scrollTo);
 </script>
 
 <style lang="sass" scoped>

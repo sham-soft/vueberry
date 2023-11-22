@@ -49,7 +49,6 @@ const props = withDefaults(
     },
 );
 
-
 // BLOCK "nav"
 type TypeNav = {
     id: string,

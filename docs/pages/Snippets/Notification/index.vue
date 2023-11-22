@@ -1,28 +1,27 @@
 <template lang="pug">
-.notification
-    h1.title Notification
+page-snippet-wrap(:dataList="dataList")
+    template(v-slot:title) Notification
 
-    p.intro Набор решений для контроля ввода текста.
+    template(v-slot:intro) Метод для вызова исчезающего уведомления.
 
 </template>
 
-<!-- <script setup lang="ts">
-</script> -->
+<script setup lang="ts">
+import codes from '@/pages/snippets/Notification/code';
+import PageSnippetWrap from '@/components/PageSnippetWrap/index.vue';
 
-<style scoped lang="sass">
-.notification
-    width: 768px
-    padding: 32px 0 80px 0
-
-.title
-    font-weight: 600
-    font-size: 48px
-
-.intro
-    color: $color-dark-2
-    margin-top: 12px
-    font-size: 18px
-    padding-bottom: 30px
-    border-bottom: 2px solid $color-gray-3
-
-</style>
+const dataList = [
+    {
+        id: 'func',
+        title: 'Function',
+        text: 'Метод создает элемент уведомления и удаляет через 6 секунд.',
+        code: codes.func,
+    },
+    {
+        id: 'styles',
+        title: 'Styles',
+        text: 'Стили для уведомления.',
+        code: codes.styles,
+    },
+];
+</script>
