@@ -2,7 +2,7 @@
 .header
     .logo
         router-link(to="/") Vueberry
-        .version V 1.0
+        .version alpha
 
     .control
         .search-wrap

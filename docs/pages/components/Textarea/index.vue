@@ -47,7 +47,7 @@ const { setValue } = useParameter();
 
 const api: TypeApiTable = apiJSON;
 const parameters: TypeParameter = parametersJSON;
-const gitLink: string = 'https://github.com/code-build-project/sham-ui/blob/main/src/components/UI/ShTextarea/index.vue';
+const gitLink: string = 'https://github.com/sham-soft/vueberry/tree/main/src/components/VbTextarea/index.vue';
 
 type TypeData = {
     modelValue: string,

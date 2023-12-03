@@ -1,6 +1,6 @@
 {
     "name": "vueberry",
-    "version": "0.0.2",
+    "version": "0.0.1",
     "main": "./dist/vueberry.umd.js",
     "module": "./dist/vueberry.es.js",
     "exports": {

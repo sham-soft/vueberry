@@ -55,7 +55,7 @@ const { setValue } = useParameter();
 const api: TypeApiTable = apiJSON;
 const options: TypeOption[]  = optionsJSON;
 const parameters: TypeParameter = parametersJSON;
-const gitLink: string = 'https://github.com/code-build-project/sham-ui/blob/main/src/components/UI/ShSelect/index.vue';
+const gitLink: string = 'https://github.com/sham-soft/vueberry/tree/main/src/components/VbSelect/index.vue';
 
 type TypeSelectData = {
     modelValue: string | string[],

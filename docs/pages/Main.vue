@@ -14,7 +14,7 @@
             router-link.button-start(to="/getting-started/installation")
                 v-button GET STARTED
             a.button-git(
-                href="https://github.com/code-build-project/sham-ui-vue"
+                href="https://github.com/sham-soft/vueberry"
                 target="_blank"
             )
                 v-button

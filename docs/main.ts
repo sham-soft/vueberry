@@ -4,13 +4,13 @@ import { createPinia } from 'pinia';
 import App from './App.vue';
 import router from './router';
 
-import ShamUI from '../src';
+import Vueberry from '../src';
 
 const app = createApp(App);
 
 app.use(createPinia());
 app.use(router);
 
-app.use(ShamUI);
+app.use(Vueberry);
 
 app.mount('#app');

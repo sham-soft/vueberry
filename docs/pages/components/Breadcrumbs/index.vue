@@ -48,7 +48,7 @@ const { setValue } = useParameter();
 const api: TypeApiTable = apiJSON;
 const options: TypeCrumb[] = optionsJSON;
 const parameters: TypeParameter = parametersJSON;
-const gitLink: string = 'https://github.com/code-build-project/sham-ui/blob/main/src/components/UI/ShBreadcrumbs/index.vue';
+const gitLink: string = 'https://github.com/sham-soft/vueberry/tree/main/src/components/VbBreadcrumbs/index.vue';
 
 type TypeData = {
     size: string,

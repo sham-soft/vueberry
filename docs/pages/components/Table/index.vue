@@ -49,7 +49,7 @@ const api: TypeApiTable = apiJSON;
 const headers: { id: string, title: string }[]  = optionsJSON.headers;
 const items: { [name: string]: string }[]  = optionsJSON.items;
 const parameters: TypeParameter = parametersJSON;
-const gitLink: string = 'https://github.com/code-build-project/sham-ui/blob/main/src/components/UI/ShTable/index.vue';
+const gitLink: string = 'https://github.com/sham-soft/vueberry/tree/main/src/components/VbTable/index.vue';
 
 type TypeData = {
     height: string,

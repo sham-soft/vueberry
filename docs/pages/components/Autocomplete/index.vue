@@ -55,7 +55,7 @@ const { setValue } = useParameter();
 const api: TypeApiTable = apiJSON;
 const options: string[] = optionsJSON;
 const parameters: TypeParameter = parametersJSON;
-const gitLink: string = 'https://github.com/code-build-project/sham-ui/blob/main/src/components/UI/ShAutocomplete/index.vue';
+const gitLink: string = 'https://github.com/sham-soft/vueberry/tree/main/src/components/VbAutocomplete/index.vue';
 
 type TypeData = {
     modelValue: string,
