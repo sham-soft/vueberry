@@ -2,8 +2,7 @@
     Vueberry
 </h1>
 
-
-> Vueberry is a set of ready-made solutions without dependencies that will simplify the creation of your multifunctional and fast applications.
+> Vueberry is a lightweight library of responsive UI components for [Vue.js](https://vuejs.org/).
 
 ## Documentation
 
