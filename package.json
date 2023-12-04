@@ -1,6 +1,9 @@
 {
     "name": "vueberry",
     "version": "0.0.1",
+    "homepage": "https://vueberry.ru",
+    "description": "Lightweight UI components for Vue.js",
+    "author": "Shamil Tepsurkaev <ya.sham@yandex.ru>",
     "main": "./dist/vueberry.umd.js",
     "module": "./dist/vueberry.es.js",
     "exports": {
@@ -14,6 +17,10 @@
         "dist",
         "src"
     ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sham-soft/vueberry.git"
+    },
     "scripts": {
         "dev": "vite",
         "build": "run-p type-check build-only",
