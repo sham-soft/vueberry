@@ -2,6 +2,7 @@
     Vueberry
 </h1>
 
+
 > Vueberry is a set of ready-made solutions without dependencies that will simplify the creation of your multifunctional and fast applications.
 
 ## Documentation
@@ -29,6 +30,8 @@ import Vueberry from 'vueberry'
 import 'vueberry/dist/style.css'
 
 Vue.use(Vueberry)
+
+```
 
 ## Versioning
 
