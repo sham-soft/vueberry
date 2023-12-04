@@ -1,3 +1,9 @@
+<p align="center">
+    <h1>
+        Vueberry
+    </h1>
+</p>
+
 # vueberry
 
 This template should help get you started developing with Vue 3 in Vite.
